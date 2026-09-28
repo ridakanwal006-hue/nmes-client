@@ -4,8 +4,8 @@ C1=U+"a34bd925-Clip_1_1080p_20260927182605.mp4"; C2=U+"cff302aa-Clip_2_202609271
 crop={C1:"1080:1444:0:238", C2:"720:964:0:158"}
 FX,FY=804,460  # face point in 1436x1920 base frame
 # (clip, start, end, zoom, bw)
-segs=[(C1,0,1.12,1.0,0),(C1,1.12,2.18,1.3,1),(C1,2.18,3.04,1.15,0),(C1,3.04,4.57,1.0,0),(C1,4.57,6.30,1.3,0),(C1,6.30,8.0,1.0,0),
-      (C2,0,1.79,1.0,0),(C2,1.79,3.38,1.25,1),(C2,3.38,4.53,1.45,1),(C2,4.53,5.37,1.0,0),(C2,5.37,8.0,1.2,0)]
+segs=[(C1,0,1.12,1.0,0),(C1,1.12,2.18,1.3,1),(C1,2.18,3.04,1.15,0),(C1,3.04,4.57,1.0,0),(C1,4.57,6.30,1.3,0),(C1,6.30,7.30,1.0,0),
+      (C2,0.25,1.79,1.0,0),(C2,1.79,3.38,1.25,1),(C2,3.38,4.53,1.45,1),(C2,4.53,5.37,1.0,0),(C2,5.37,8.0,1.2,0)]
 fc=[]; lbl=""
 for i,(c,a,b,z,bw) in enumerate(segs):
     W,H=round(1436*z/2)*2,round(1920*z/2)*2
@@ -13,7 +13,7 @@ for i,(c,a,b,z,bw) in enumerate(segs):
     n=0 if c==C1 else 1
     vf=f"[{n}:v]trim={a}:{b},setpts=PTS-STARTPTS,crop={crop[c]},scale={W}:{H}:flags=lanczos,crop=1080:1920:{x:.0f}:{y:.0f},setsar=1,fps=30"
     vf+=",eq=contrast=1.08:saturation=1.1" if not bw else ",hue=s=0,eq=contrast=1.15:brightness=0.02"
-    fc.append(vf+f"[v{i}]"); fc.append(f"[{n}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000[a{i}]"); lbl+=f"[v{i}][a{i}]"
+    fc.append(vf+f"[v{i}]"); fc.append(f"[{n}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000"+(f",afade=t=out:st={b-a-0.03:.3f}:d=0.03" if i==5 else "")+(",afade=t=in:d=0.02" if i==6 else "")+f"[a{i}]"); lbl+=f"[v{i}][a{i}]"
 fc.append(lbl+f"concat=n={len(segs)}:v=1:a=1[v][a]")
 subprocess.run(["ffmpeg","-v","error","-y","-i",C1,"-i",C2,"-filter_complex",";".join(fc),"-map","[v]","-map","[a]",
     "-c:v","libx264","-preset","medium","-crf","16","-c:a","pcm_s16le",f"{S}/joined.mov"],check=True)
@@ -35,9 +35,9 @@ cap(2.18,3.03,"before he even")
 cap(3.04,4.40,f"read the {Y}first message")
 cap(4.58,5.24,"Think about this")
 cap(5.25,6.29,f"if you {Y}apologize")
-cap(6.30,7.95,"to the person who...")
+cap(6.30,7.28,"to the person who...")
 # --- Clip 2 ---
-o=8.0
+o=7.30-0.25  # clip 2 starts at 0.25s, joined right after clip 1 ends at 7.30s
 cap(o+0.25,o+1.76,f"He hadn't replied\\Nin {Y}4 minutes")
 label(o+1.80,o+3.37,"OVERTHINKING:")
 cap(o+1.80,o+3.37,f"\"I must've done\\N{Y}something wrong\"",style="Quote")
