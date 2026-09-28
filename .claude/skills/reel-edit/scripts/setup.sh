@@ -4,8 +4,10 @@
 # the sherpa-onnx GitHub release instead of faster-whisper's default download.
 set -e
 MODEL_DIR="${MODEL_DIR:-$HOME/.cache/reel-edit}"
-command -v ffmpeg >/dev/null || { apt-get update -qq && apt-get install -y -qq ffmpeg; }
-fc-list | grep -qi "Montserrat-ExtraBold" || apt-get install -y -qq fonts-montserrat
+need=""
+command -v ffmpeg >/dev/null || need="$need ffmpeg"
+fc-list | grep -qi "Montserrat-ExtraBold" || need="$need fonts-montserrat"
+if [ -n "$need" ]; then apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq $need >/dev/null; fi
 python3 -c "import sherpa_onnx, PIL, numpy" 2>/dev/null || pip install -q sherpa-onnx pillow numpy
 if [ ! -f "$MODEL_DIR/sherpa-onnx-whisper-medium.en/medium.en-encoder.int8.onnx" ]; then
   mkdir -p "$MODEL_DIR" && cd "$MODEL_DIR"
