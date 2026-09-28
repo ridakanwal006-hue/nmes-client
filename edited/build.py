@@ -35,14 +35,14 @@ ev=[]
 def cap(a,b,text,style="Main",y=1150):
     ev.append(f"Dialogue: 0,{ts(a)},{ts(b)},{style},,0,0,0,,{{\\pos(540,{y}){IN}}}{text}")
 def pop(a,b,text,y=1150,rot=4):
-    ev.append(f"Dialogue: 1,{ts(a)},{ts(b)},Pop,,0,0,0,,{{\\pos(540,{y})\\frz{rot}\\fscx135\\fscy135\\t(0,110,\\fscx100\\fscy100)}}{text}")
-def label(a,b,text,y=1015,x=True):
+    ev.append(f"Dialogue: 1,{ts(a)},{ts(b)},Pop,,0,0,0,,{{\\pos(540,{y})\\frz{rot}\\fscx120\\fscy120\\t(0,110,\\fscx100\\fscy100)}}{text}")
+def label(a,b,text,y=1000,x=True):
     mark=r"{\c&H2A2AE8&}✖ {\c&H000000&}" if x else ""
     ev.append(f"Dialogue: 0,{ts(a)},{ts(b)},Label,,0,0,0,,{{\\pos(540,{y})}}{mark}{text}")
 def strike(a,b,text,style_font,size,y):
     # libass draws ASS font sizes ~0.74x the Pillow em size, so scale the measured width to match
     w=ImageFont.truetype(style_font,size).getlength(text)*0.74+20
-    ev.append(f"Dialogue: 2,{ts(a)},{ts(b)},Line,,0,0,0,,{{\\an5\\pos(540,{y+5})\\p1}}m 0 0 l {w:.0f} 0 {w:.0f} 8 0 8{{\\p0}}")
+    ev.append(f"Dialogue: 2,{ts(a)},{ts(b)},Line,,0,0,0,,{{\\an5\\pos(540,{y+5})\\p1}}m 0 0 l {w:.0f} 0 {w:.0f} 9 0 9{{\\p0}}")
 # --- Clip 1 ---
 cap(0.10,1.11,f"I texted my {Y}partner")
 label(1.12,2.29,"THE TEXT:",x=False)
@@ -61,9 +61,9 @@ cap(O+1.62,O+2.45,"\"So I assumed",style="Quote",y=1125)
 cap(O+2.46,O+3.29,f"I'd done {Y}something wrong\"",style="Quote",y=1125)
 pop(O+3.30,O+4.39,f"AND {Y}APOLOGIZED",rot=-4)
 cap(O+4.56,O+5.35,f"I'm not {Y}needy,",y=1150)
-cap(O+5.36,O+6.19,"I'm not needy,",style="Struck",y=1075)
-strike(O+5.36,O+6.19,"I'm not needy,","/usr/share/fonts/opentype/montserrat/Montserrat-ExtraBold.otf",68,1075)
-cap(O+5.36,O+6.19,f"I'm just {Y}fluent in",y=1180)
+cap(O+5.36,O+6.19,"I'm not needy,",style="Struck",y=1065)
+strike(O+5.36,O+6.19,"I'm not needy,","/usr/share/fonts/opentype/montserrat/Montserrat-ExtraBold.otf",80,1065)
+cap(O+5.36,O+6.19,f"I'm just {Y}fluent in",y=1185)
 pop(O+6.20,O+7.95,f"PRE-EMPTIVE\\N{Y}DAMAGE CONTROL",rot=-4)
 ass="""[Script Info]
 ScriptType: v4.00+
@@ -74,11 +74,11 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Main,Montserrat ExtraBold,68,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4.5,2.5,5,40,40,0,1
-Style: Struck,Montserrat ExtraBold,68,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4.5,2.5,5,40,40,0,1
-Style: Quote,Montserrat ExtraBold,66,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,4.5,2.5,5,40,40,0,1
-Style: Label,Montserrat Black,54,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,11,0,5,40,40,0,1
-Style: Pop,Montserrat Black,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,3.5,5,40,40,0,1
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
 Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
 
 [Events]
