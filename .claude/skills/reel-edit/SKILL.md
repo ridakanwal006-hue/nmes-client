@@ -11,11 +11,14 @@ match the voice is the worst failure. Never guess a word - check it against the 
 
 ## 1. Setup (every new session)
 
+`SKILL_DIR` below is the folder this SKILL.md is in (in a repo: `.claude/skills/reel-edit`;
+installed for the user: `~/.claude/skills/reel-edit`; uploaded to claude.ai: wherever the skill is mounted).
+
 ```bash
-bash .claude/skills/reel-edit/scripts/setup.sh
+bash "$SKILL_DIR/scripts/setup.sh"
 ```
 Installs ffmpeg, Montserrat fonts, sherpa-onnx + Pillow, and Whisper medium.en (~1.9 GB download,
-from GitHub because Hugging Face is blocked here). Uploaded files are under `/root/.claude/uploads/<session>/`.
+from GitHub because Hugging Face is blocked here). In Claude Code on the web, uploaded files are under `/root/.claude/uploads/<session>/`.
 
 ## 2. Look before editing
 
@@ -29,7 +32,7 @@ from GitHub because Hugging Face is blocked here). Uploaded files are under `/ro
 ## 3. Get the words and their times (scripts/asr.py)
 
 ```bash
-A=.claude/skills/reel-edit/scripts/asr.py
+A="$SKILL_DIR/scripts/asr.py"
 python3 $A text clip.mp4                                  # full transcript
 python3 $A end  clip.mp4 '[[0,"partner",0.4,1.3], ...]'   # first guess at where a word ends
 python3 $A win  clip.mp4 '[[0,1.12],[1.12,2.3]]'          # confirm each caption window
