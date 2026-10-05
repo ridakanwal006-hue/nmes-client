@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.54,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Some people are only {\c&H00D7FF&}happy
+Dialogue: 0,0:00:01.56,0:00:02.86,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}when they {\c&H00D7FF&}drag you down
+Dialogue: 1,0:00:02.88,0:00:03.56,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}TO THEIR\N{\c&H00D7FF&}LEVEL
+Dialogue: 0,0:00:03.58,0:00:05.18,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They'll {\c&H00D7FF&}pick apart\N{\c&HFFFFFF&}everything you do
+Dialogue: 0,0:00:05.20,0:00:06.14,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}not to {\c&H00D7FF&}help you
+Dialogue: 0,0:00:06.16,0:00:07.38,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}it just makes them\N{\c&H00D7FF&}feel better
+Dialogue: 0,0:00:07.40,0:00:09.28,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So I {\c&H00D7FF&}stopped explaining\N{\c&HFFFFFF&}myself
+Dialogue: 0,0:00:09.30,0:00:10.52,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to people who'd\N{\c&H00D7FF&}already{\c&HFFFFFF&} made up
+Dialogue: 1,0:00:10.54,0:00:11.54,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THEIR MINDS\N{\c&H00D7FF&}ABOUT ME
+Dialogue: 0,0:00:11.56,0:00:12.58,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}Protect{\c&HFFFFFF&} your peace
+Dialogue: 0,0:00:12.60,0:00:13.56,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}It's {\c&H00D7FF&}expensive
+Dialogue: 0,0:00:13.58,0:00:15.00,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Stop handing it out\Nfor {\c&H00D7FF&}free
+Dialogue: 0,0:00:15.02,0:00:16.88,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to people who'd {\c&H00D7FF&}never\N{\c&HFFFFFF&}do the same for you
