@@ -1,0 +1,37 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.28,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}Words{\c&HFFFFFF&} and opinions
+Dialogue: 0,0:00:01.30,0:00:02.70,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}can only {\c&H00D7FF&}hurt{\c&HFFFFFF&} you
+Dialogue: 0,0:00:02.72,0:00:03.92,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}as much as\Nyou {\c&H00D7FF&}believe
+Dialogue: 1,0:00:03.94,0:00:04.56,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THEY'RE\N{\c&H00D7FF&}TRUE
+Dialogue: 0,0:00:04.58,0:00:05.51,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}next time you {\c&H00D7FF&}worry{\c&HFFFFFF&} about
+Dialogue: 0,0:00:05.53,0:00:07.22,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}someone {\c&H00D7FF&}judging{\c&HFFFFFF&} you
+Dialogue: 0,0:00:07.24,0:00:08.12,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}realize{\c&HFFFFFF&} something
+Dialogue: 0,0:00:08.14,0:00:08.65,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You're actually
+Dialogue: 0,0:00:08.67,0:00:09.82,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}judging yourself
+Dialogue: 0,0:00:09.84,0:00:10.50,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So {\c&H00D7FF&}ask
+Dialogue: 0,0:00:10.52,0:00:11.90,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Why does {\c&H00D7FF&}this sting
+Dialogue: 0,0:00:11.92,0:00:13.62,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}What {\c&H00D7FF&}part{\c&HFFFFFF&} of me\Nagrees with
+Dialogue: 0,0:00:13.64,0:00:14.10,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}them
+Dialogue: 0,0:00:14.12,0:00:14.89,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}It's not their
+Dialogue: 0,0:00:14.91,0:00:16.12,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}judgment{\c&HFFFFFF&} hurting you
+Dialogue: 0,0:00:16.14,0:00:17.56,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}It's your own {\c&H00D7FF&}self-doubt
+Dialogue: 0,0:00:17.58,0:00:18.32,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}Reframe{\c&HFFFFFF&} it
+Dialogue: 0,0:00:18.34,0:00:18.78,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and take your
+Dialogue: 1,0:00:18.80,0:00:19.54,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}{\c&H00D7FF&}POWER\NBACK
