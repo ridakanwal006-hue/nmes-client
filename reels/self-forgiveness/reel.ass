@@ -1,0 +1,35 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.74,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}Here's{\c&HFFFFFF&} a sentence
+Dialogue: 0,0:00:00.76,0:00:01.49,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}I {\c&H00D7FF&}wish{\c&HFFFFFF&} I'd heard
+Dialogue: 0,0:00:01.51,0:00:02.18,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}years ago
+Dialogue: 0,0:00:02.20,0:00:02.94,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You made the {\c&H00D7FF&}best
+Dialogue: 0,0:00:02.96,0:00:03.86,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}call{\c&HFFFFFF&} you could with
+Dialogue: 0,0:00:03.88,0:00:04.80,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}what you {\c&H00D7FF&}knew{\c&HFFFFFF&} then
+Dialogue: 0,0:00:04.82,0:00:05.82,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's not {\c&H00D7FF&}failure
+Dialogue: 1,0:00:05.84,0:00:06.54,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}BEING\N{\c&H00D7FF&}HUMAN
+Dialogue: 0,0:00:06.56,0:00:07.72,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\c&H00D7FF&}Forgive{\c&HFFFFFF&} yourself
+Dialogue: 0,0:00:07.74,0:00:09.26,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}for not knowing\N{\c&H00D7FF&}earlier
+Dialogue: 0,0:00:09.28,0:00:10.60,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}what only {\c&H00D7FF&}time{\c&HFFFFFF&} could
+Dialogue: 1,0:00:10.62,0:00:11.22,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}TEACH\N{\c&H00D7FF&}YOU
+Dialogue: 0,0:00:11.24,0:00:12.38,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Stop {\c&H00D7FF&}punishing{\c&HFFFFFF&} yourself
+Dialogue: 0,0:00:12.40,0:00:13.78,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}for old {\c&H00D7FF&}versions{\c&HFFFFFF&}\Nof you
+Dialogue: 0,0:00:13.80,0:00:14.58,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They didn't {\c&H00D7FF&}know{\c&HFFFFFF&} yet
+Dialogue: 0,0:00:14.60,0:00:15.28,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Now you {\c&H00D7FF&}do
+Dialogue: 1,0:00:15.30,0:00:15.98,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}MOVE LIKE\N{\c&H00D7FF&}IT
