@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.06,0:00:01.56,Pop,,0,0,0,,{\pos(540,1130)\frz-3\fs260\fscx120\fscy120\t(0,110,\fscx100\fscy100)}{\c&H00D7FF&}90%
+Dialogue: 1,0:00:11.85,0:00:13.15,Pop,,0,0,0,,{\pos(540,1150)\frz-3\fscx120\fscy120\t(0,110,\fscx100\fscy100)}EXCEPT\N{\c&H00D7FF&}YOURSELF
+Dialogue: 1,0:00:15.87,0:00:16.97,Pop,,0,0,0,,{\pos(540,1150)\frz-3\fscx120\fscy120\t(0,110,\fscx100\fscy100)}BRUTALLY\N{\c&H00D7FF&}HONEST
+Dialogue: 1,0:00:21.83,0:00:23.20,Pop,,0,0,0,,{\pos(540,1150)\frz-3\fad(120,1000)}SELF-DOUBT {\c&H00D7FF&}FADE
