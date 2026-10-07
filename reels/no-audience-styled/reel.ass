@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:00.51,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fs250\fscx125\fscy125\t(0,120,\fscx100\fscy100)}{\c&H00D7FF&}90%
+Dialogue: 0,0:00:00.53,0:00:01.20,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}of your
+Dialogue: 0,0:00:01.22,0:00:02.02,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}self-doubt{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.04,0:00:03.86,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}disappears{\fs80}{\c&HFFFFFF&} the moment\Nyou realize
+Dialogue: 0,0:00:03.88,0:00:04.84,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}there's {\fs104}{\c&H00D7FF&}no audience{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.86,0:00:05.42,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to {\fs104}{\c&H00D7FF&}perform{\fs80}{\c&HFFFFFF&} for
+Dialogue: 0,0:00:05.44,0:00:06.64,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}No approval{\fs80}{\c&HFFFFFF&} to win
+Dialogue: 0,0:00:06.66,0:00:08.00,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}No one{\fs80}{\c&HFFFFFF&} to impress
+Dialogue: 1,0:00:08.02,0:00:08.34,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}{\c&H00D7FF&}NOBODY
+Dialogue: 0,0:00:08.36,0:00:09.72,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to {\fs104}{\c&H00D7FF&}convince{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:09.74,0:00:10.68,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}EXCEPT\N{\c&H00D7FF&}YOURSELF
+Dialogue: 0,0:00:10.70,0:00:12.12,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So {\fs104}{\c&H00D7FF&}stop playing{\fs80}{\c&HFFFFFF&}\Nthe role you think
+Dialogue: 0,0:00:12.14,0:00:13.10,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}everyone {\fs104}{\c&H00D7FF&}expects{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:13.12,0:00:14.10,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}BRUTALLY\N{\c&H00D7FF&}HONEST
+Dialogue: 0,0:00:14.12,0:00:15.08,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}about {\fs104}{\c&H00D7FF&}who you are{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.10,0:00:15.46,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and what
+Dialogue: 0,0:00:15.48,0:00:16.60,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}actually\N{\fs104}{\c&H00D7FF&}fulfills you{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.62,0:00:17.04,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Start{\fs80}{\c&HFFFFFF&} acting
+Dialogue: 0,0:00:17.06,0:00:18.08,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}from that {\fs104}{\c&H00D7FF&}place{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.10,0:00:18.86,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and watch your
+Dialogue: 1,0:00:18.88,0:00:19.58,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}SELF-DOUBT\N{\c&H00D7FF&}FADE
+Dialogue: 0,0:00:19.60,0:00:20.10,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}The {\fs104}{\c&H00D7FF&}performance{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.12,0:00:20.85,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}ends{\fs80}{\c&HFFFFFF&} when you
+Dialogue: 1,0:00:20.87,0:00:21.51,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}STOP\N{\c&H00D7FF&}AUDITIONING
