@@ -115,13 +115,12 @@ def render(clips, segs, events, out, fps=24, cutaway=None):
                     "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-c:a", "pcm_s16le", joined], check=True)
     open(ass, "w", encoding="utf-8").write(events.ass())
     if cutaway:
-        img, t0, t1 = cutaway; d = t1 - t0
-        fcx = (f"[1:v]setpts=PTS-STARTPTS+{t0}/TB,format=rgba,split=2[a][b];"
-               f"[a]crop=230:1350:0:0,scale=1080:1920,gblur=sigma=40[bg];"
-               f"[b]crop=605:835:255:195,scale=w='740*(1+0.07*min(max((t-{t0})/{d},0),1))':h=-2:eval=frame[fg];"
-               f"[bg][fg]overlay=x='540-0.5*w':y='610-0.5*h':eval=frame,format=rgba,"
-               f"fade=t=in:st={t0}:d=0.18:alpha=1,fade=t=out:st={t1 - 0.18}:d=0.18:alpha=1[card];"
-               f"[0:v][card]overlay=enable='between(t,{t0},{t1})':eof_action=pass,ass={ass}[v]")
+        img, t0, t1 = cutaway
+        pin = f"min(max((t-{t0})/0.45,0),1)"; pout = f"min(max((t-{t1 - 0.4})/0.4,0),1)"
+        ypos = f"1060+900*(pow(1-{pin},3)+pow({pout},2))"
+        fcx = (f"[1:v]crop=605:835:255:195,scale=580:-2,format=rgba,pad=iw+90:ih+90:45:45:color=0x00000000,split=2[b][a];"
+               f"[a]colorchannelmixer=rr=0:gg=0:bb=0:aa=0.55,gblur=sigma=16[sh];[sh][b]overlay=0:6,format=rgba[card];"
+               f"[0:v][card]overlay=x='(W-w)/2':y='{ypos}':eval=frame:eof_action=repeat,ass={ass}[v]")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", joined, "-framerate", str(fps), "-loop", "1", "-t", "30", "-i", img,
                         "-filter_complex", fcx, "-map", "[v]", "-map", "0:a",
                         "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:v", "libx264", "-preset", "slow",
