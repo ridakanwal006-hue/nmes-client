@@ -1,0 +1,32 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Type,Montserrat ExtraBold,80,&H00141414,&HFF000000,&HFF000000,&HFF000000,0,0,0,0,100,100,0,0,1,0,0,5,40,40,0,1
+Style: Plate,Montserrat Black,10,&H00FFFFFF,&H00FFFFFF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Label,Montserrat Black,60,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:07.30,Plate,,0,0,0,,{\an7\pos(0,0)\p1\1c&H5BB3D9&\3c&H5BB3D9&\bord23\blur2.5}m 180 1340 l 915 1340 915 1512 180 1512{\p0}
+Dialogue: 0,0:00:00.00,0:00:07.30,Plate,,0,0,0,,{\an7\pos(0,0)\p1\1c&HFFFFFF&\3c&HFFFFFF&\bord16\blur2.5}m 180 1340 l 915 1340 915 1512 180 1512{\p0}
+Dialogue: 0,0:00:07.30,0:00:10.00,Plate,,0,0,0,,{\an7\pos(0,0)\p1\1c&H5BB3D9&\3c&H5BB3D9&\bord23\blur2.5}m 180 1352 l 915 1352 915 1434 180 1434{\p0}
+Dialogue: 0,0:00:07.30,0:00:10.00,Plate,,0,0,0,,{\an7\pos(0,0)\p1\1c&HFFFFFF&\3c&HFFFFFF&\bord16\blur2.5}m 180 1352 l 915 1352 915 1434 180 1434{\p0}
+Dialogue: 2,0:00:00.05,0:00:02.45,Label,,0,0,0,,{\pos(540,150)\fad(120,120)}LOOK 1
+Dialogue: 2,0:00:02.55,0:00:04.55,Label,,0,0,0,,{\pos(540,150)\fad(120,120)}LOOK 2
+Dialogue: 2,0:00:04.65,0:00:07.20,Label,,0,0,0,,{\pos(540,150)\fad(120,120)}LOOK 3
+Dialogue: 2,0:00:07.30,0:00:10.00,Label,,0,0,0,,{\pos(540,150)\fad(120,120)}LOOK 4
+Dialogue: 2,0:00:00.12,0:00:00.60,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs88\1c&H0E7CC2&}{\k4}B{\k4}u{\k4}r{\k4}g{\k4}u{\k4}n{\k4}d{\k4}y
+Dialogue: 2,0:00:00.60,0:00:01.04,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs80\1c&H141414&}{\k4}w{\k4}i{\k4}t{\k4}h{\k4} {\fs88\1c&H0E7CC2&}{\k4}g{\k4}o{\k4}l{\k4}d
+Dialogue: 2,0:00:01.04,0:00:02.40,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs80\1c&H141414&}{\k2}l{\k2}o{\k2}o{\k2}k{\k2}s{\k2} {\k2}s{\k2}o{\k2} {\fs88\1c&H0E7CC2&}{\k2}l{\k2}u{\k2}x{\k2}u{\k2}r{\k2}i{\k2}o{\k2}u{\k2}s
+Dialogue: 2,0:00:02.85,0:00:03.70,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs88\1c&H0E7CC2&}{\k2}M{\k2}o{\k2}n{\k2}o{\k2}c{\k2}h{\k2}r{\k2}o{\k2}m{\k2}e{\k2} {\fs88\1c&H0E7CC2&}{\k2}b{\k2}r{\k2}o{\k2}w{\k2}n
+Dialogue: 2,0:00:03.70,0:00:04.50,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs80\1c&H141414&}{\k2}l{\k2}o{\k2}o{\k2}k{\k2}s{\k2} {\k2}s{\k2}o{\k2} {\fs88\1c&H0E7CC2&}{\k2}c{\k2}h{\k2}i{\k2}c
+Dialogue: 2,0:00:04.92,0:00:06.00,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs88\1c&H0E7CC2&}{\k2}G{\k2}r{\k2}a{\k2}y{\fs80\1c&H141414&}{\k2} {\k2}w{\k2}i{\k2}t{\k2}h{\k2} {\fs88\1c&H0E7CC2&}{\k2}d{\k2}e{\k2}n{\k2}i{\k2}m
+Dialogue: 2,0:00:06.00,0:00:07.20,Type,,0,0,0,,{\an5\pos(540,1426)\fad(0,90)}{\fs80\1c&H141414&}{\k2}l{\k2}o{\k2}o{\k2}k{\k2}s{\k2} {\k2}s{\k2}o{\k2} {\fs88\1c&H0E7CC2&}{\k2}e{\k2}f{\k2}f{\k2}o{\k2}r{\k2}t{\k2}l{\k2}e{\k2}s{\k2}s
+Dialogue: 2,0:00:08.10,0:00:08.72,Type,,0,0,0,,{\an5\pos(540,1393)\fad(0,90)}{\fs80\1c&H141414&}{\k2}W{\k2}h{\k2}i{\k2}c{\k2}h{\k2} {\k2}l{\k2}o{\k2}o{\k2}k{\k2} {\k2}i{\k2}s
+Dialogue: 2,0:00:08.72,0:00:09.70,Type,,0,0,0,,{\an5\pos(540,1393)\fad(0,90)}{\fs80\1c&H141414&}{\k2}y{\k2}o{\k2}u{\k2}r{\k2} {\fs88\1c&H0E7CC2&}{\k2}f{\k2}a{\k2}v{\k2}o{\k2}r{\k2}i{\k2}t{\k2}e{\fs80\1c&H141414&}{\k2}?
