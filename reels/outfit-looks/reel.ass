@@ -1,0 +1,66 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.55,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 180 1338 l 915 1338 915 1512 180 1512{\p0}
+Dialogue: 0,0:00:00.55,0:00:01.00,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 126 1404 l 971 1404 971 1604 126 1604{\p0}
+Dialogue: 0,0:00:01.00,0:00:01.60,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 162 1360 l 934 1360 934 1543 162 1543{\p0}
+Dialogue: 0,0:00:01.60,0:00:02.45,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 90 1448 l 1009 1448 1009 1665 90 1665{\p0}
+Dialogue: 0,0:00:02.45,0:00:03.05,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 180 1338 l 915 1338 915 1512 180 1512{\p0}
+Dialogue: 0,0:00:03.05,0:00:03.70,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 126 1404 l 971 1404 971 1604 126 1604{\p0}
+Dialogue: 0,0:00:03.70,0:00:04.50,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 72 1469 l 1028 1469 1028 1696 72 1696{\p0}
+Dialogue: 0,0:00:04.50,0:00:05.30,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 180 1338 l 915 1338 915 1512 180 1512{\p0}
+Dialogue: 0,0:00:05.30,0:00:06.00,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 126 1404 l 971 1404 971 1604 126 1604{\p0}
+Dialogue: 0,0:00:06.00,0:00:06.60,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 162 1360 l 934 1360 934 1543 162 1543{\p0}
+Dialogue: 0,0:00:06.60,0:00:07.30,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 72 1469 l 1028 1469 1028 1696 72 1696{\p0}
+Dialogue: 0,0:00:07.30,0:00:08.10,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 175 1352 l 920 1352 920 1432 175 1432{\p0}
+Dialogue: 0,0:00:08.10,0:00:08.70,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 131 1406 l 966 1406 966 1496 131 1496{\p0}
+Dialogue: 0,0:00:08.70,0:00:09.40,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 66 1488 l 1034 1488 1034 1592 66 1592{\p0}
+Dialogue: 0,0:00:09.40,0:00:10.00,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H000000&\3c&H000000&\bord16\blur3}m 175 1352 l 920 1352 920 1432 175 1432{\p0}
+Dialogue: 2,0:00:00.10,0:00:00.54,Label,,0,0,0,,{\pos(540,1290)}LOOK 1
+Dialogue: 2,0:00:00.55,0:00:00.99,Label,,0,0,0,,{\pos(540,1348)}LOOK 1
+Dialogue: 2,0:00:01.00,0:00:01.59,Label,,0,0,0,,{\pos(540,1310)}LOOK 1
+Dialogue: 2,0:00:01.60,0:00:02.39,Label,,0,0,0,,{\pos(540,1388)}LOOK 1
+Dialogue: 2,0:00:02.50,0:00:03.04,Label,,0,0,0,,{\pos(540,1290)}LOOK 2
+Dialogue: 2,0:00:03.05,0:00:03.69,Label,,0,0,0,,{\pos(540,1348)}LOOK 2
+Dialogue: 2,0:00:03.70,0:00:04.44,Label,,0,0,0,,{\pos(540,1407)}LOOK 2
+Dialogue: 2,0:00:04.60,0:00:05.29,Label,,0,0,0,,{\pos(540,1290)}LOOK 3
+Dialogue: 2,0:00:05.30,0:00:05.99,Label,,0,0,0,,{\pos(540,1348)}LOOK 3
+Dialogue: 2,0:00:06.00,0:00:06.59,Label,,0,0,0,,{\pos(540,1310)}LOOK 3
+Dialogue: 2,0:00:06.60,0:00:07.14,Label,,0,0,0,,{\pos(540,1407)}LOOK 3
+Dialogue: 2,0:00:07.30,0:00:08.09,Label,,0,0,0,,{\pos(540,1305)}LOOK 4
+Dialogue: 2,0:00:08.10,0:00:08.69,Label,,0,0,0,,{\pos(540,1354)}LOOK 4
+Dialogue: 2,0:00:08.70,0:00:09.39,Label,,0,0,0,,{\pos(540,1426)}LOOK 4
+Dialogue: 2,0:00:09.40,0:00:09.99,Label,,0,0,0,,{\pos(540,1305)}LOOK 4
+Dialogue: 2,0:00:00.12,0:00:00.54,Main,,0,0,0,,{\pos(540,1425)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Burgundy{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:00.55,0:00:00.57,Main,,0,0,0,,{\pos(540,1504)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Burgundy{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:00.58,0:00:00.99,Main,,0,0,0,,{\pos(540,1504)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}with {\fs98}{\c&H00D7FF&}gold{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:01.00,0:00:01.01,Main,,0,0,0,,{\pos(540,1451)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}with {\fs98}{\c&H00D7FF&}gold{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:01.02,0:00:01.59,Main,,0,0,0,,{\pos(540,1451)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}luxurious{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:01.60,0:00:02.39,Main,,0,0,0,,{\pos(540,1556)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}luxurious{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:02.85,0:00:03.04,Main,,0,0,0,,{\pos(540,1425)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Monochrome{\fs80}{\c&HFFFFFF&} {\fs98}{\c&H00D7FF&}brown{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:03.05,0:00:03.67,Main,,0,0,0,,{\pos(540,1504)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Monochrome{\fs80}{\c&HFFFFFF&} {\fs98}{\c&H00D7FF&}brown{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:03.68,0:00:03.69,Main,,0,0,0,,{\pos(540,1504)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}chic{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:03.70,0:00:04.44,Main,,0,0,0,,{\pos(540,1582)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}chic{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:04.92,0:00:05.29,Main,,0,0,0,,{\pos(540,1425)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Gray{\fs80}{\c&HFFFFFF&} with {\fs98}{\c&H00D7FF&}denim{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:05.30,0:00:05.99,Main,,0,0,0,,{\pos(540,1504)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs98}{\c&H00D7FF&}Gray{\fs80}{\c&HFFFFFF&} with {\fs98}{\c&H00D7FF&}denim{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:06.00,0:00:06.59,Main,,0,0,0,,{\pos(540,1451)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}effortless{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:06.60,0:00:07.14,Main,,0,0,0,,{\pos(540,1582)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}looks so {\fs98}{\c&H00D7FF&}effortless{\fs80}{\c&HFFFFFF&}
+Dialogue: 2,0:00:08.10,0:00:08.69,Main,,0,0,0,,{\pos(540,1451)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Which look is
+Dialogue: 2,0:00:08.70,0:00:08.71,Main,,0,0,0,,{\pos(540,1540)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Which look is
+Dialogue: 2,0:00:08.72,0:00:09.39,Main,,0,0,0,,{\pos(540,1540)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs98}{\c&H00D7FF&}favorite{\fs80}{\c&HFFFFFF&}?
+Dialogue: 2,0:00:09.40,0:00:09.59,Main,,0,0,0,,{\pos(540,1392)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs98}{\c&H00D7FF&}favorite{\fs80}{\c&HFFFFFF&}?
