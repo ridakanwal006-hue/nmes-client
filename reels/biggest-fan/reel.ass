@@ -1,0 +1,43 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:21.14,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,21140,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:19.14,0:00:21.09,Label,,0,0,0,,{\pos(540,130)}SAVE THIS  -  SHARE IT
+Dialogue: 0,0:00:00.00,0:00:00.66,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You need to
+Dialogue: 0,0:00:00.68,0:00:01.86,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}be your\N{\fs104}{\c&H00D7FF&}partner's{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:01.88,0:00:02.76,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}BIGGEST\N{\c&H00D7FF&}FAN
+Dialogue: 0,0:00:02.78,0:00:03.34,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}I mean that
+Dialogue: 0,0:00:03.36,0:00:04.12,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}with my\N{\fs104}{\c&H00D7FF&}whole heart{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.14,0:00:04.98,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}If you don't want
+Dialogue: 0,0:00:05.00,0:00:05.35,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}their {\fs104}{\c&H00D7FF&}dreams{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.37,0:00:06.44,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to come {\fs104}{\c&H00D7FF&}true{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.46,0:00:07.36,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}if you can't\N{\fs104}{\c&H00D7FF&}celebrate{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.38,0:00:08.20,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}their {\fs104}{\c&H00D7FF&}wins{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:08.22,0:00:09.34,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}ASK YOURSELF\N{\c&H00D7FF&}WHY?
+Dialogue: 0,0:00:09.36,0:00:10.44,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}And if you can't be
+Dialogue: 0,0:00:10.46,0:00:11.31,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}check in on your
+Dialogue: 0,0:00:11.33,0:00:12.14,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}insecurities{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.16,0:00:13.16,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}because that's\N{\fs104}{\c&H00D7FF&}usually{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.18,0:00:14.74,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}what's really\Ngoing on
+Dialogue: 0,0:00:14.76,0:00:15.56,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Either face your
+Dialogue: 0,0:00:15.58,0:00:16.39,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}insecurities{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.41,0:00:17.20,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}or admit
+Dialogue: 0,0:00:17.22,0:00:17.64,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you chose
+Dialogue: 0,0:00:17.66,0:00:18.36,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}wrong person{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.38,0:00:19.89,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}But don't promise\N{\fs104}{\c&H00D7FF&}a lifetime{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.91,0:00:21.12,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to someone you\N{\fs104}{\c&H00D7FF&}can't root for{\fs80}{\c&HFFFFFF&}
