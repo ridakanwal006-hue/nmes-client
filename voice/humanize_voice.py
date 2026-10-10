@@ -15,11 +15,17 @@ for i, (f1, f2, d) in enumerate([(350, 3200, 0.34), (300, 2800, 0.40), (400, 350
 run(f'ffmpeg -y -loglevel error -f lavfi -i "anoisesrc=d=0.45:c=white:a=0.5:seed=9" '
     f'-af "lowpass=f=2200,highpass=f=260,afade=t=in:d=0.09,afade=t=out:st=0.05:d=0.55:curve=exp,adelay=45|45" -ar 48000 -ac 1 {W}/ir.wav')
 # 4) gentle voice chain (less pitch shift, light compression, almost no saturation) + convolution room
-voice = ("highpass=f=70,"
-         + ("" if mode.startswith("clean") else "rubberband=pitch=0.95:formant=preserved,") + "equalizer=f=95:t=h:w=100:g=4.8,equalizer=f=170:t=q:w=1.0:g=1.5,"
-         "equalizer=f=350:t=q:w=1.2:g=-1.5,equalizer=f=2500:t=q:w=0.8:g=-2,lowpass=f=9000,"
-         "acompressor=threshold=-24dB:ratio=2.5:attack=15:release=200:makeup=3,"
-         "aeval=val(0)+0.04*tanh(2*val(0)):c=same")
+if mode.startswith("fierce"):
+    voice = ("highpass=f=60,equalizer=f=100:t=h:w=100:g=6.5,equalizer=f=170:t=q:w=1.0:g=2.0,"
+             "equalizer=f=350:t=q:w=1.2:g=-2.0,equalizer=f=3000:t=q:w=0.8:g=2.5,equalizer=f=5200:t=q:w=0.8:g=1.5,"
+             "lowpass=f=10000,acompressor=threshold=-27dB:ratio=4.5:attack=8:release=130:makeup=6,"
+             "aeval=val(0)+0.10*tanh(3*val(0)):c=same,alimiter=limit=0.9")
+else:
+    voice = ("highpass=f=70,"
+             + ("" if mode.startswith("clean") else "rubberband=pitch=0.95:formant=preserved,") + "equalizer=f=95:t=h:w=100:g=4.8,equalizer=f=170:t=q:w=1.0:g=1.5,"
+             "equalizer=f=350:t=q:w=1.2:g=-1.5,equalizer=f=2500:t=q:w=0.8:g=-2,lowpass=f=9000,"
+             "acompressor=threshold=-24dB:ratio=2.5:attack=15:release=200:makeup=3,"
+             "aeval=val(0)+0.04*tanh(2*val(0)):c=same")
 if mode.endswith('tail'):
     fc = f"[0:a]{voice},asplit[d][w0];[w0][1:a]afir=dry=0:wet=10,volume=0.9[w];[d][w]amix=inputs=2:weights=1 0.10:normalize=0[v]"
 else:
