@@ -31,7 +31,6 @@ def cap(c, a, b, text, **k): E.cap(T(c, a), T(c, b) - .01, text, **k)
 def pop(c, a, b, text, **k): E.pop(T(c, a), T(c, b) - .01, text, **k)
 # retention helpers: top progress bar, "watch till the end" hook, save/share end card
 E.ev.append(f"Dialogue: 3,{ts(0)},{ts(TOTAL)},Line,,0,0,0,,{{\\an7\\pos(0,0)\\p1\\1c&H00D7FF&\\fscx0\\t(0,{int(TOTAL * 1000)},\\fscx100)}}m 0 0 l 1080 0 1080 12 0 12{{\\p0}}")
-E.label(0.05, 2.3, "WATCH TILL THE END", x=False, y=130)
 E.label(TOTAL - 2.0, TOTAL - 0.05, "SAVE THIS  -  SHARE IT", x=False, y=130)
 # t4 hook
 cap("t4", .24, .99, f"If {K('someone')} pushes")
