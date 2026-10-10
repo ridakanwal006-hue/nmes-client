@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:24.69,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,24690,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.05,0:00:02.30,Label,,0,0,0,,{\pos(540,130)}WATCH TILL THE END
+Dialogue: 0,0:00:22.69,0:00:24.64,Label,,0,0,0,,{\pos(540,130)}SAVE THIS  -  SHARE IT
+Dialogue: 0,0:00:00.00,0:00:00.74,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}If {\fs104}{\c&H00D7FF&}someone{\fs80}{\c&HFFFFFF&} pushes
+Dialogue: 0,0:00:00.76,0:00:01.94,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you to your\N{\fs104}{\c&H00D7FF&}breaking point{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.96,0:00:02.68,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}then {\fs104}{\c&H00D7FF&}shames{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.70,0:00:03.48,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you for {\fs104}{\c&H00D7FF&}breaking{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:03.50,0:00:04.36,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}NOT YOUR\N{\c&H00D7FF&}FAULT
+Dialogue: 1,0:00:04.38,0:00:05.74,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THAT'S\N{\c&H00D7FF&}MANIPULATION
+Dialogue: 0,0:00:05.76,0:00:06.63,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They {\fs104}{\c&H00D7FF&}ignore{\fs80}{\c&HFFFFFF&} your\N{\fs104}{\c&H00D7FF&}boundaries{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.65,0:00:07.21,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}dismiss{\fs80}{\c&HFFFFFF&} your
+Dialogue: 0,0:00:07.23,0:00:08.63,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}feelings{\fs80}{\c&HFFFFFF&}, wear\Nyou {\fs104}{\c&H00D7FF&}down{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.65,0:00:09.51,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}then use your\N{\fs104}{\c&H00D7FF&}reaction{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.53,0:00:10.44,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}as {\fs104}{\c&H00D7FF&}proof{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.46,0:00:11.73,Label,,0,0,0,,{\pos(540,1000)}{\c&H2A2AE8&}✖ {\c&H000000&}THEIR TRICK:
+Dialogue: 0,0:00:10.46,0:00:11.72,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}that you are\Nthe {\fs104}{\c&H00D7FF&}problem{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.74,0:00:12.90,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They call you\Ntoo {\fs104}{\c&H00D7FF&}emotional{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.92,0:00:13.80,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}so they never
+Dialogue: 0,0:00:13.82,0:00:14.82,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}take {\fs104}{\c&H00D7FF&}accountability{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.84,0:00:15.70,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and you start\N{\fs104}{\c&H00D7FF&}doubting{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.72,0:00:16.72,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}yourself{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.74,0:00:17.74,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}instead of seeing
+Dialogue: 1,0:00:17.76,0:00:18.62,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THE\N{\c&H00D7FF&}PATTERN
+Dialogue: 0,0:00:18.64,0:00:19.22,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}But {\fs104}{\c&H00D7FF&}clarity{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.24,0:00:20.07,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}destroys\N{\fs104}{\c&H00D7FF&}manipulation{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.09,0:00:21.52,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Trust{\fs80}{\c&HFFFFFF&} what you saw
+Dialogue: 0,0:00:21.54,0:00:23.17,Main,,0,0,0,,{\pos(540,1150)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}trust{\fs80}{\c&HFFFFFF&} what you felt
+Dialogue: 1,0:00:23.19,0:00:24.67,Pop,,0,0,0,,{\pos(540,1150)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}STOP\N{\c&H00D7FF&}TOLERATING IT
