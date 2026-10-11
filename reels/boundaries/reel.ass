@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:19.66,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,19660,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:17.66,0:00:19.61,Label,,0,0,0,,{\pos(540,130)}SAVE THIS  -  SHARE IT
+Dialogue: 0,0:00:00.00,0:00:00.64,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You said {\fs104}{\c&H00D7FF&}yes{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.66,0:00:01.04,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}again
+Dialogue: 0,0:00:01.06,0:00:01.69,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and the {\fs104}{\c&H00D7FF&}second{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.71,0:00:02.23,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the word {\fs104}{\c&H00D7FF&}left{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.25,0:00:02.88,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs104}{\c&H00D7FF&}mouth{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:02.90,0:00:03.96,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}YOUR STOMACH\N{\c&H00D7FF&}DROPPED
+Dialogue: 0,0:00:03.98,0:00:04.52,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Not {\fs104}{\c&H00D7FF&}because{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.54,0:00:04.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you're {\fs104}{\c&H00D7FF&}kind{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:05.00,0:00:05.92,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}BECAUSE YOU'RE\N{\c&H00D7FF&}SCARED
+Dialogue: 0,0:00:05.94,0:00:06.59,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Scared{\fs80}{\c&HFFFFFF&} they'll
+Dialogue: 0,0:00:06.61,0:00:07.02,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}be {\fs104}{\c&H00D7FF&}upset{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.04,0:00:07.90,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Scared{\fs80}{\c&HFFFFFF&} they'll\N{\fs104}{\c&H00D7FF&}leave{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.92,0:00:09.14,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Scared{\fs80}{\c&HFFFFFF&} of seeming\N{\fs104}{\c&H00D7FF&}difficult{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.16,0:00:09.80,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Every {\fs104}{\c&H00D7FF&}yes{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.82,0:00:10.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you don't {\fs104}{\c&H00D7FF&}mean{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.57,0:00:11.05,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}is a {\fs104}{\c&H00D7FF&}no{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.07,0:00:11.58,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to yourself
+Dialogue: 0,0:00:11.60,0:00:12.58,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and {\fs104}{\c&H00D7FF&}resentment{\fs80}{\c&HFFFFFF&}\Nis just
+Dialogue: 0,0:00:12.60,0:00:13.23,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}unspoken{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.25,0:00:13.92,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}boundaries
+Dialogue: 0,0:00:13.94,0:00:14.60,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}piling{\fs80}{\c&HFFFFFF&} up
+Dialogue: 0,0:00:14.62,0:00:15.36,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}No{\fs80}{\c&HFFFFFF&} is a
+Dialogue: 1,0:00:15.38,0:00:16.74,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}COMPLETE\N{\c&H00D7FF&}SENTENCE
+Dialogue: 0,0:00:16.76,0:00:18.12,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the people who\N{\fs104}{\c&H00D7FF&}respect{\fs80}{\c&HFFFFFF&} you
+Dialogue: 0,0:00:18.14,0:00:19.10,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}won't {\fs104}{\c&H00D7FF&}leave{\fs80}{\c&HFFFFFF&}\Nover it
+Dialogue: 1,0:00:19.12,0:00:19.64,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}TRUST\N{\c&H00D7FF&}THAT
