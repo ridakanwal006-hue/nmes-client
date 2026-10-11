@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:21.78,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,21780,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:19.78,0:00:21.73,Label,,0,0,0,,{\pos(540,130)}SAVE THIS  -  SHARE IT
+Dialogue: 0,0:00:00.00,0:00:00.96,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}It's {\fs104}{\c&H00D7FF&}3 a.m.{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.98,0:00:01.84,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Everyone's\N{\fs104}{\c&H00D7FF&}asleep{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.86,0:00:02.66,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}except {\fs104}{\c&H00D7FF&}you{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.68,0:00:04.02,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}replaying a\N{\fs104}{\c&H00D7FF&}conversation{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.04,0:00:05.04,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}from {\fs104}{\c&H00D7FF&}three days{\fs80}{\c&HFFFFFF&} ago
+Dialogue: 0,0:00:05.06,0:00:05.90,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Your {\fs104}{\c&H00D7FF&}brain{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.92,0:00:06.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}treats a casual
+Dialogue: 0,0:00:06.57,0:00:07.06,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}okay {\fs104}{\c&H00D7FF&}text{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.08,0:00:07.50,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}like a
+Dialogue: 1,0:00:07.52,0:00:08.14,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}CRIME\N{\c&H00D7FF&}SCENE
+Dialogue: 1,0:00:08.16,0:00:08.92,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}ANALYZING
+Dialogue: 1,0:00:08.94,0:00:09.72,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}{\c&H00D7FF&}REWINDING
+Dialogue: 0,0:00:09.74,0:00:10.31,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}searching{\fs80}{\c&HFFFFFF&} for
+Dialogue: 0,0:00:10.33,0:00:11.20,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}what you did\N{\fs104}{\c&H00D7FF&}wrong{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.22,0:00:11.66,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}But you're
+Dialogue: 0,0:00:11.68,0:00:12.61,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}overthinking{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.63,0:00:12.91,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}because
+Dialogue: 0,0:00:12.93,0:00:14.20,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}something{\fs80}{\c&HFFFFFF&}\Nis wrong
+Dialogue: 0,0:00:14.22,0:00:15.27,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You're\N{\fs104}{\c&H00D7FF&}overthinking{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.30,0:00:15.92,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}because you don't
+Dialogue: 0,0:00:15.94,0:00:16.32,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}trust{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.34,0:00:16.76,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}yourself {\fs104}{\c&H00D7FF&}yet{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.78,0:00:17.52,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So {\fs104}{\c&H00D7FF&}tonight{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.54,0:00:18.20,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}try {\fs104}{\c&H00D7FF&}this{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.22,0:00:19.03,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}I did my\N{\fs104}{\c&H00D7FF&}best{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.05,0:00:19.80,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}with what I\N{\fs104}{\c&H00D7FF&}knew{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:19.82,0:00:20.48,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THEN\N{\c&H00D7FF&}SLEEP
+Dialogue: 1,0:00:20.50,0:00:21.76,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THE REPLAY\N{\c&H00D7FF&}HELPS NO ONE
