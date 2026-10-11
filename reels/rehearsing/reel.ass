@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:19.48,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,19479,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:00.90,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You {\fs104}{\c&H00D7FF&}rehearsed{\fs80}{\c&HFFFFFF&} a
+Dialogue: 0,0:00:00.92,0:00:01.72,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}30 second{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.74,0:00:02.32,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}phone call
+Dialogue: 0,0:00:02.34,0:00:03.30,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}10 times{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:03.32,0:00:03.62,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}10
+Dialogue: 1,0:00:03.64,0:00:04.10,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}{\c&H00D7FF&}10
+Dialogue: 0,0:00:04.12,0:00:05.30,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You wrote\Nthe {\fs104}{\c&H00D7FF&}text{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.32,0:00:05.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}deleted{\fs80}{\c&HFFFFFF&} it
+Dialogue: 0,0:00:06.00,0:00:06.90,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}rewrote{\fs80}{\c&HFFFFFF&} it
+Dialogue: 0,0:00:06.92,0:00:07.47,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}then asked
+Dialogue: 0,0:00:07.49,0:00:08.22,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}a {\fs104}{\c&H00D7FF&}friend{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.24,0:00:08.89,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}if it sounds
+Dialogue: 0,0:00:08.91,0:00:09.34,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}okay{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.36,0:00:09.80,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's not
+Dialogue: 0,0:00:09.82,0:00:10.30,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}being {\fs104}{\c&H00D7FF&}careful{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.32,0:00:11.12,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's not
+Dialogue: 0,0:00:11.14,0:00:11.85,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}trusting{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.87,0:00:12.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your own {\fs104}{\c&H00D7FF&}voice{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.57,0:00:13.34,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to handle
+Dialogue: 0,0:00:13.36,0:00:13.97,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}a normal
+Dialogue: 0,0:00:13.99,0:00:14.54,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}moment{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.56,0:00:15.38,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So {\fs104}{\c&H00D7FF&}next time{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.40,0:00:16.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}send it {\fs104}{\c&H00D7FF&}messy{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.28,0:00:16.54,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}say it
+Dialogue: 0,0:00:16.56,0:00:17.38,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}imperfect{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.40,0:00:17.97,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}The {\fs104}{\c&H00D7FF&}world{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.99,0:00:18.46,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}won't {\fs104}{\c&H00D7FF&}end{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.48,0:00:19.11,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}but the {\fs104}{\c&H00D7FF&}rehearsing{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.13,0:00:19.46,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}will{\fs80}{\c&HFFFFFF&}
