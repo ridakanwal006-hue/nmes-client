@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:19.12,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,19119,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:00.66,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You spent
+Dialogue: 0,0:00:00.68,0:00:01.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}three days{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.28,0:00:02.42,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}cringing{\fs80}{\c&HFFFFFF&}\Nover a
+Dialogue: 1,0:00:02.44,0:00:03.48,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}10-SECOND\N{\c&H00D7FF&}MOMENT
+Dialogue: 0,0:00:03.50,0:00:04.12,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}everyone{\fs80}{\c&HFFFFFF&} else
+Dialogue: 0,0:00:04.14,0:00:04.57,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}forgot{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.59,0:00:04.92,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}in 10
+Dialogue: 0,0:00:04.94,0:00:05.34,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}seconds{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.36,0:00:06.14,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Nobody{\fs80}{\c&HFFFFFF&} is
+Dialogue: 0,0:00:06.16,0:00:06.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}thinking about that
+Dialogue: 0,0:00:07.00,0:00:07.53,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}embarrassing{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.55,0:00:07.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}thing you did
+Dialogue: 1,0:00:08.00,0:00:08.54,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}NOBODY
+Dialogue: 0,0:00:08.56,0:00:09.36,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They're all too
+Dialogue: 0,0:00:09.38,0:00:09.87,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}replaying{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.89,0:00:10.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}their {\fs104}{\c&H00D7FF&}own{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.28,0:00:11.29,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's the {\fs104}{\c&H00D7FF&}prison{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.31,0:00:12.04,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}of {\fs104}{\c&H00D7FF&}self-doubt{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.06,0:00:12.75,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You think you're
+Dialogue: 0,0:00:12.77,0:00:13.39,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}main character{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.41,0:00:13.95,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}in everyone's
+Dialogue: 0,0:00:13.97,0:00:14.52,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}judgment{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:14.54,0:00:15.54,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}YOU'RE\N{\c&H00D7FF&}NOT
+Dialogue: 0,0:00:15.56,0:00:16.46,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}And that's {\fs104}{\c&H00D7FF&}not sad{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:16.48,0:00:17.18,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THAT'S\N{\c&H00D7FF&}FREEDOM
+Dialogue: 0,0:00:17.20,0:00:17.65,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Live like
+Dialogue: 0,0:00:17.67,0:00:18.42,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}nobody's{\fs80}{\c&HFFFFFF&} watching
+Dialogue: 0,0:00:18.44,0:00:18.76,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}because
+Dialogue: 0,0:00:18.78,0:00:19.10,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}they're {\fs104}{\c&H00D7FF&}not{\fs80}{\c&HFFFFFF&}
