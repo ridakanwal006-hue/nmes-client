@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:16.76,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,16760,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:00.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}For the {\fs104}{\c&H00D7FF&}days{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.57,0:00:01.15,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you {\fs104}{\c&H00D7FF&}doubt{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.17,0:00:01.74,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}yourself{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:01.76,0:00:02.62,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}REMEMBER\N{\c&H00D7FF&}THIS
+Dialogue: 0,0:00:02.64,0:00:03.42,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you've {\fs104}{\c&H00D7FF&}survived{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.44,0:00:04.25,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}every {\fs104}{\c&H00D7FF&}hard{\fs80}{\c&HFFFFFF&} day
+Dialogue: 0,0:00:04.27,0:00:04.94,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}so {\fs104}{\c&H00D7FF&}far{\fs80}{\c&HFFFFFF&}
+Dialogue: 1,0:00:04.96,0:00:06.46,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}EVERY SINGLE\N{\c&H00D7FF&}ONE
+Dialogue: 0,0:00:06.48,0:00:07.23,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's {\fs104}{\c&H00D7FF&}100%{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.25,0:00:08.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}success {\fs104}{\c&H00D7FF&}rate{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.28,0:00:09.18,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Doubt is {\fs104}{\c&H00D7FF&}loud{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.20,0:00:10.03,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}but {\fs104}{\c&H00D7FF&}evidence{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.08,0:00:10.70,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}is {\fs104}{\c&H00D7FF&}louder{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.72,0:00:11.21,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Come {\fs104}{\c&H00D7FF&}back{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.23,0:00:11.71,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to this when you
+Dialogue: 0,0:00:11.73,0:00:12.02,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}forget{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.04,0:00:12.95,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}version{\fs80}{\c&HFFFFFF&} of you
+Dialogue: 0,0:00:12.97,0:00:13.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}that you're {\fs104}{\c&H00D7FF&}scared{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.57,0:00:13.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to {\fs104}{\c&H00D7FF&}become{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.00,0:00:14.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}someone{\fs80}{\c&HFFFFFF&} already
+Dialogue: 0,0:00:14.57,0:00:15.14,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}admires{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.16,0:00:15.75,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}version{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.77,0:00:16.74,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you are {\fs104}{\c&H00D7FF&}right now{\fs80}{\c&HFFFFFF&}
