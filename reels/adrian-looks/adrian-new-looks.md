@@ -27,3 +27,11 @@ hands clasped on a wooden table, relaxed friendly look.
 Start from the attached image. The man speaks directly in a calm warm voice with accurate lip-sync.
 Same face, same outfit, same room in every clip. Camera static, medium shot, tiny natural movement.
 No text, no subtitles on screen. He says exactly: "<yahan apni line>"
+
+## NATURAL BOLNE KA FIX (Veo clips dobara banane ke liye)
+Agar clip mein muh bohot khul raha ho ya wo camera ki taraf dekhe, Veo prompt mein yeh add karo:
+
+He talks in a relaxed, natural conversational way, like chatting with a friend. Small, subtle mouth movements,
+lips only slightly parted, no exaggerated or wide mouth opening, no big smile while speaking, calm even pace.
+His eyes stay on the host sitting just off-screen to the right of the camera the whole time; he never looks
+into the camera lens. Gentle small head nods, soft eyebrow movement, one hand gesture at most.
