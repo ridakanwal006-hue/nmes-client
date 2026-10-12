@@ -128,10 +128,10 @@ const starter = {
       kicker: 'CHAPTER 5', title: 'Talking about your ex and your kids',
       blocks: [
         ['p', 'You do not have to hide your past, but you do not have to tell it all on the first date either.'],
-        ['lbl', 'ABOUT YOUR EX'],
+        ['lbl', 'ABOUT YOUR EX: WHAT YOU COULD SAY (ILLUSTRATIVE)'],
         ['msg', 'We wanted different things. It ended, and I learned a lot from it.', 'Short, calm, no blame'],
         ['dont', ['Complaining about your ex for more than a sentence or two.', 'Details of the divorce, money or legal fights.', 'Comparing her to your ex.']],
-        ['lbl', 'ABOUT YOUR KIDS'],
+        ['lbl', 'ABOUT YOUR KIDS: WHAT YOU COULD SAY (ILLUSTRATIVE)'],
         ['msg', 'I have two kids. They are a big part of my life, and I am proud of them.', 'Honest and positive'],
         ['p', 'Introducing kids to someone new is a big step. Many people wait until the relationship is steady and exclusive. There is no fixed rule, so go at the pace that is right for your family.'],
       ],
