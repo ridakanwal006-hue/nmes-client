@@ -98,7 +98,7 @@ function cover(p) {
     <div class="title">${t}</div>
     <div class="sub">${esc(p.sub)}</div>
   </div>
-  <div class="foot">${esc(NAME)} · Calm. Direct. Real.</div>
+  <div class="foot">${esc(NAME)} · AI-generated character</div>
 </section>`;
 }
 
@@ -126,7 +126,7 @@ function html(p) {
   const counter = { n: 0, q: 0, number: p.id.includes('50-texts') };
   const toc = `<section class="toc"><div class="kick">INSIDE</div><h1>Contents</h1>${p.chapters.map(c =>
     `<div class="row"><b>›</b><span><b style="color:#fff">${esc(c.title)}</b></span></div>`).join('')}
-  <div class="disc">${esc(NAME)} shares general communication advice for adults. It is not therapy and no result is guaranteed. Always respect other people's boundaries and consent.</div></section>`;
+  <div class="disc">${esc(NAME)} is an AI-generated character, not a real person, and has no personal life story. This is general communication advice for adults. It is not therapy, medical, legal or financial advice, and no result is guaranteed. Always respect other people's boundaries and consent.</div></section>`;
   const chaps = p.chapters.map(c => { counter.q = 0;
     return `<section class="chap"><div class="kick">${esc(c.kicker)}</div>${c.noTitle ? '' : `<h1>${esc(c.title)}</h1>`}${blocks(c.blocks, counter)}</section>`; }).join('\n');
   const end = `<section class="end"><div class="big">Be calm.<br><span>Be curious.</span><br>Be real.</div><p style="color:#9a9aa6;margin-top:.3in">— ${esc(NAME)}</p></section>`;

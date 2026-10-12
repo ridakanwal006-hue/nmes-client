@@ -43,7 +43,7 @@ const scamChecklist = {
         ]],
         ['lbl', 'SAFE-MEETING RULES'],
         ['ul', ['Video call before you meet.', 'Meet in a public place and tell a friend where you are going.', 'Use your own transport.', 'Keep your address, workplace and finances private until you really know the person.']],
-        ['tip', 'The numbers', 'The FTC reported that people aged 60 and over lost about $2.4 billion to fraud in 2024 (all fraud types, not only romance). Check the FTC site for current figures.'],
+        ['tip', 'The numbers', 'People 60+ reported about $2.4 billion in fraud losses to the FTC in 2024 (all fraud types). Verify current figures on ftc.gov. Dorian Wolfe is an AI-generated character. General information, not legal or financial advice.'],
       ],
     },
   ],
