@@ -124,7 +124,7 @@ function blocks(bl, counter) {
 
 function html(p) {
   const counter = { n: 0, q: 0, number: p.id.includes('50-texts') };
-  const toc = `<section class="toc"><div class="kick">INSIDE</div><h1>Contents</h1>${p.chapters.map(c =>
+  const toc = `<section class="toc"><div class="kick">INSIDE</div><h1>Contents</h1>${p.chapters.filter(c => !c.hideToc).map(c =>
     `<div class="row"><b>›</b><span><b style="color:#fff">${esc(c.title)}</b></span></div>`).join('')}
   <div class="disc">${esc(NAME)} is an AI-generated character, not a real person, and has no personal life story. This is general communication advice for adults. It is not therapy, medical, legal or financial advice, and no result is guaranteed. Always respect other people's boundaries and consent.</div></section>`;
   const chaps = p.chapters.map(c => { counter.q = 0;
