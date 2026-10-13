@@ -5,15 +5,17 @@ let NAME, BRAND, products;
 if (process.env.CONTENT) { ({ NAME, BRAND, products } = require(process.env.CONTENT)); }
 else { const c = require('./content.js'); NAME = c.NAME; BRAND = c.BRAND; products = require('./extend.js')(c.products); }
 
+if (process.env.VISUALS) require(process.env.VISUALS)(products);
 const OUT = process.env.OUTDIR || '/home/user/nmes-client/products';
 const charPath = path.join('/home/user/nmes-client/products', 'character.jpg');
 const hasChar = fs.existsSync(charPath);
 const charB64 = hasChar ? 'data:image/jpeg;base64,' + fs.readFileSync(charPath).toString('base64') : '';
 
+const ART = require('./art.js');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 
-const css = `
+const css = ART.css + `
 :root{--bg:#09090b;--panel:#16161a;--line:#2a2a31;--red:#e5222f;--red2:#ff4d5a;--text:#ececf0;--mute:#9a9aa6}
 @page{size:6in 9in;margin:0.7in 0.6in 0.75in 0.6in;background:#09090b;
   @bottom-center{content:counter(page);font:600 8pt Inter;color:#6d6d78}
@@ -90,6 +92,7 @@ function cover(p) {
   const t = p.titleLines.map((l, i) => i === p.titleLines.length - 1 ? `<span>${esc(l)}</span>` : esc(l)).join('<br>');
   return `<section class="cover">
   ${hasChar ? `<img class="char" src="${charB64}"><div class="shade"></div>` : ''}
+  ${p.motif && ART.art[p.motif] ? `<div class="motif">${ART.art[p.motif]}</div>` : ''}
   <div class="in">
     <div class="brand">${BRAND}</div>
     <div class="byline">by ${esc(NAME)}</div>
@@ -118,7 +121,7 @@ function blocks(bl, counter) {
     if (t === 'chk') return `<div class="chk">${a.map(x => `<div>${rich(x)}</div>`).join('')}</div>`;
     if (t === 'cards') return `<div class="cards">${a.map(([tag, q]) => { counter.c = (counter.c||0)+1; return `<div class="card"><div class="tag">${esc(tag)}</div><div class="qq">${esc(q)}</div><div class="no">${counter.c}</div></div>`; }).join('')}</div>`;
     if (t === 'steps') return a.map(([k, v]) => `<div class="step"><div class="k">${esc(k)}</div><div class="v">${rich(v)}</div></div>`).join('');
-    return '';
+    return ART.render(b) || '';
   }).join('\n');
 }
 

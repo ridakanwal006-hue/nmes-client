@@ -379,7 +379,7 @@ const challengeHer = {
       blocks: [
         ['p', 'List steps from easiest to hardest. Do the easiest first. Move up when it feels manageable.'],
         ['chk', ['1. (easiest) ________', '2. ________', '3. ________', '4. ________', '5. (hardest) ________']],
-        ['lbl', 'NOTES: WHAT HELPED, WHAT IS HARD'], ['lines', 8],
+        ['lbl', 'NOTES: WHAT HELPED, WHAT IS HARD'], ['lines', 4],
       ],
     },
     {
