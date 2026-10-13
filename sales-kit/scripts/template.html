@@ -34,26 +34,36 @@ h2{font-size:clamp(24px,4vw,34px);line-height:1.1;margin:.2em 0 .5em;text-transf
 .chip.on{background:var(--red);border-color:var(--red)}
 .chip.free{color:var(--green)}.chip.free.on{color:#fff}
 #q{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:9px 14px;font:inherit;font-size:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;overflow:hidden}
-.card .top{padding:16px 18px 6px}
-.code{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--red2);text-transform:uppercase}
-.card h3{margin:.15em 0 .1em;font-size:19px;line-height:1.25}
-.pain{font-size:13px;color:var(--mute)}
-.hook{margin:10px 18px;background:#0d0d10;border:1px solid #4a1a1f;border-left:3px solid var(--red);border-radius:8px;padding:10px 12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:var(--red2);font-weight:700}
-.hook small{display:block;color:var(--mute);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;font-family:Inter,system-ui,sans-serif}
-.script{padding:4px 18px 8px;font-size:15px;color:#d8d8e0}
-.script p{margin:.55em 0}
-.meta{padding:0 18px 12px;font-size:13px;color:var(--mute)}
-.meta b{color:#cfcfd8}
-.kws{color:var(--mute);font-size:12.5px;padding:0 18px 8px}
-.foot{margin-top:auto;border-top:1px solid var(--line);padding:12px 18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.cta{font-weight:800;letter-spacing:.1em;font-size:12px;background:#1f0d10;border:1px solid #4a1a1f;color:var(--red2);padding:4px 10px;border-radius:999px}
-.cta.free{background:#0d1f14;border-color:#1f4a2c;color:var(--green)}
-.to{font-size:12.5px;color:var(--mute);flex:1;min-width:120px}
-.cp{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:5px 10px;font:inherit;font-size:12px;cursor:pointer}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.item.open{border-color:var(--red)}
+.row{display:flex;align-items:center;gap:14px;width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;padding:14px 18px;cursor:pointer}
+.row:hover{background:#18181d}
+.num{flex:0 0 auto;min-width:44px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--red2)}
+.rt{flex:1;min-width:0}
+.rt b{display:block;font-size:17px;line-height:1.3}
+.rt span{display:block;font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arrow{color:var(--mute);transition:transform .2s;flex:0 0 auto}
+.item.open .arrow{transform:rotate(90deg);color:var(--red2)}
+.body{display:none;border-top:1px solid var(--line);padding:6px 18px 18px}
+.item.open .body{display:block}
+.hook{margin:14px 0 6px;background:#0d0d10;border:1px solid #4a1a1f;border-left:3px solid var(--red);border-radius:8px;padding:10px 12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--red2);font-weight:700}
+.hook small,.lbl{display:block;color:var(--mute);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;font-family:Inter,system-ui,sans-serif}
+.lbl{margin:16px 0 6px}
+.lines{counter-reset:l}
+.ln{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid #202026;font-size:17px;line-height:1.5;color:#e4e4ea}
+.ln:last-child{border-bottom:0}
+.ln i{flex:0 0 26px;font-style:normal;font-size:12px;font-weight:800;color:var(--red2);padding-top:4px}
+.ln.cta{color:#fff;font-weight:700}
+.info{font-size:14px;color:#cfcfd8;margin:6px 0}
+.info b{color:#fff}
+.note{margin:12px 0 0;font-size:13px;color:#d8c9a8;background:#1c1810;border:1px solid #3a321c;border-radius:8px;padding:8px 11px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.cta-pill{font-weight:800;letter-spacing:.1em;font-size:12px;background:#1f0d10;border:1px solid #4a1a1f;color:var(--red2);padding:4px 10px;border-radius:999px}
+.cta-pill.free{background:#0d1f14;border-color:#1f4a2c;color:var(--green)}
+.to{font-size:13px;color:var(--mute);flex:1;min-width:140px}
+.cp{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:6px 11px;font:inherit;font-size:12.5px;cursor:pointer}
 .cp:hover{border-color:var(--red)}
-.note{margin:0 18px 12px;font-size:12.5px;color:#d8c9a8;background:#1c1810;border:1px solid #3a321c;border-radius:8px;padding:7px 10px}
 table{width:100%;border-collapse:collapse;font-size:14.5px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
 th{color:var(--mute);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
@@ -84,10 +94,10 @@ footer p{max-width:760px}
 
 <section id="scripts"><div class="wrap">
   <h2>Scripts</h2>
-  <p class="lead">Filter by comment keyword or pack. Tap a button to copy the spoken text, the caption or the hashtags.</p>
+  <p class="lead">One script per row. Tap a row to open it: the spoken text is shown line by line, the way you read it into the voice. Filter by comment keyword or pack, or search a word.</p>
   <div class="tools" id="chips"></div>
   <div class="tools"><input id="q" type="search" placeholder="Search a word: ghosted, bald, scam, divorce..."></div>
-  <div class="grid" id="grid"></div>
+  <div class="list" id="grid"></div>
   <div class="empty" id="empty">No script matches. Clear the search.</div>
 </div></section>
 
@@ -162,22 +172,27 @@ document.getElementById('chips').onclick = e => {
 };
 document.getElementById('q').oninput = e => { query = e.target.value.toLowerCase(); render(); };
 
-function card(d, i){
+function card(d, i, open){
   const free = FREE.has(d.kw);
   const prod = PRODUCT[d.kw] ? PRODUCT[d.kw][0] : '';
   const sub = d.pack==='b' ? esc(d.fmt)+(d.pain? ' · pain: '+esc(d.pain):'') : esc(d.product||'');
-  return '<article class="card">'
-   +'<div class="top"><div class="code">'+esc(d.code)+(d.pack==='b'?' · Meme':' · Search')+'</div><h3>'+esc(cap(d.title))+'</h3><div class="pain">'+sub+'</div></div>'
-   +'<div class="hook"><small>On-screen hook</small>'+esc(d.hook)+'</div>'
-   +'<div class="script">'+d.script.map(l=>'<p>'+esc(l)+'</p>').join('')+'</div>'
-   +(d.keywords?'<div class="kws"><b>Search words:</b> '+esc(d.keywords)+'</div>':'')
-   +(d.caption?'<div class="meta"><b>Caption:</b> '+esc(d.caption)+'</div>':'')
-   +'<div class="meta"><b>Hashtags:</b> '+esc(d.tags)+'</div>'
+  const last = d.script.length-1;
+  return '<div class="item'+(open?' open':'')+'" data-i="'+i+'">'
+   +'<button class="row" data-toggle="'+i+'"><span class="num">'+esc(d.code)+'</span><span class="rt"><b>'+esc(cap(d.title))+'</b><span>'+esc(d.hook)+'</span></span><span class="cta-pill'+(free?' free':'')+'">'+esc(d.kw)+'</span><span class="arrow">&#9656;</span></button>'
+   +'<div class="body">'
+   +'<div class="hook"><small>1 · On-screen hook</small>'+esc(d.hook)+'</div>'
+   +'<div class="lbl">2 · Say it, line by line</div><div class="lines">'
+   +d.script.map((l,k)=>'<div class="ln'+(k===last?' cta':'')+'"><i>'+(k+1)+'</i><span>'+esc(l)+'</span></div>').join('')+'</div>'
+   +(d.keywords?'<div class="lbl">3 · Search words</div><div class="info">'+esc(d.keywords)+'</div>':'')
+   +(d.caption?'<div class="lbl">'+(d.keywords?'4':'3')+' · Caption</div><div class="info">'+esc(d.caption)+'</div>':'')
+   +'<div class="lbl">Hashtags</div><div class="info">'+esc(d.tags)+'</div>'
+   +(sub?'<div class="lbl">Type</div><div class="info">'+sub+'</div>':'')
    +(d.note?'<div class="note">'+esc(cap(d.note))+'</div>':'')
-   +'<div class="foot"><span class="cta'+(free?' free':'')+'">'+esc(d.kw)+'</span><span class="to">→ '+esc(prod)+'</span>'
+   +'<div class="acts"><span class="cta-pill'+(free?' free':'')+'">Comment '+esc(d.kw)+'</span><span class="to">&rarr; '+esc(prod)+'</span>'
    +'<button class="cp" data-i="'+i+'" data-w="script">Copy script</button>'
    +(d.caption?'<button class="cp" data-i="'+i+'" data-w="caption">Copy caption</button>':'')
-   +'<button class="cp" data-i="'+i+'" data-w="tags">Copy tags</button></div></article>';
+   +'<button class="cp" data-i="'+i+'" data-w="tags">Copy tags</button></div>'
+   +'</div></div>';
 }
 function render(){
   const list = DATA.scripts.map((d,i)=>[d,i]).filter(([d])=>{
@@ -187,10 +202,14 @@ function render(){
     if(query){ const h=(d.title+d.hook+d.script.join(' ')+d.caption+d.tags+d.keywords+d.pain+d.fmt).toLowerCase(); if(!h.includes(query)) return false; }
     return true;
   });
-  document.getElementById('grid').innerHTML = list.map(([d,i])=>card(d,i)).join('');
+  document.getElementById('grid').innerHTML = list.map(([d,i],n)=>card(d,i,n===0&&list.length===1)).join('');
   document.getElementById('empty').style.display = list.length?'none':'block';
 }
 document.getElementById('grid').onclick = e => {
+  const tg = e.target.closest('[data-toggle]');
+  if(tg){ const it = tg.closest('.item'); const was = it.classList.contains('open');
+    document.querySelectorAll('.item.open').forEach(x=>x.classList.remove('open'));
+    if(!was){ it.classList.add('open'); it.scrollIntoView({block:'nearest',behavior:'smooth'}); } return; }
   const b = e.target.closest('.cp'); if(!b) return;
   const d = DATA.scripts[+b.dataset.i], w = b.dataset.w;
   const t = w==='script' ? d.script.join('\n\n') : w==='caption' ? d.caption : d.tags;
@@ -198,7 +217,7 @@ document.getElementById('grid').onclick = e => {
   if(navigator.clipboard) navigator.clipboard.writeText(t).then(done, done); else done();
 };
 document.querySelector('#bank tbody').innerHTML = DATA.bank.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('');
-document.querySelector('#fun tbody').innerHTML = Object.entries(PRODUCT).map(([k,v])=>'<tr><td><span class="cta'+(FREE.has(k)?' free':'')+'">'+k+'</span></td><td>'+esc(v[0])+'</td><td>'+esc(v[1])+'</td></tr>').join('');
+document.querySelector('#fun tbody').innerHTML = Object.entries(PRODUCT).map(([k,v])=>'<tr><td><span class="cta-pill'+(FREE.has(k)?' free':'')+'">'+k+'</span></td><td>'+esc(v[0])+'</td><td>'+esc(v[1])+'</td></tr>').join('');
 render();
 </script>
 </body></html>
