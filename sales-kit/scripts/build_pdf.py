@@ -29,10 +29,10 @@ def page_script(d):
 <div class="foot"><span class="pill{" free" if free else ""}">COMMENT {e(d["kw"])}</span> <span>→ {e(p1)}, then {e(p2)}</span></div></section>'''
 
 css = '''
-@page{size:6in 9in;margin:0;background:#09090b}
+@page{size:6in 9in;margin:0;background:#2e2e36}
 *{box-sizing:border-box}
-html,body{margin:0;background:#09090b;color:#ececf0;font-family:Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.pg{width:6in;height:9in;padding:.55in .5in .45in;page-break-after:always;overflow:hidden;position:relative;font-size:10.5pt;line-height:1.45}
+html,body{margin:0;background:#2e2e36;counter-reset:pg;color:#ececf0;font-family:Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pg{counter-increment:pg;background:#09090b;border:.17in solid #2e2e36;border-top:.17in solid #e5222f;width:6in;height:9in;padding:.42in .36in .4in;page-break-after:always;overflow:hidden;position:relative;font-size:10.5pt;line-height:1.45}
 .pg:last-child{page-break-after:auto}
 .code{font-size:7.5pt;font-weight:800;letter-spacing:.2em;color:#ff4d5a}
 h1{font-size:34pt;line-height:1.02;margin:.3em 0;text-transform:uppercase;font-weight:900}
@@ -48,7 +48,8 @@ h2{font-size:19pt;line-height:1.15;margin:.2em 0 .1em;font-weight:800}
 .ln.cta{color:#fff;font-weight:700;border-bottom:0}
 p{margin:.2em 0;color:#cfcfd8;font-size:9.5pt}
 .note{margin-top:10px;font-size:8.5pt;color:#d8c9a8;background:#1c1810;border:1px solid #3a321c;border-radius:6px;padding:6px 9px}
-.foot{position:absolute;left:.5in;right:.5in;bottom:.4in;border-top:1px solid #2a2a31;padding-top:8px;font-size:8.5pt;color:#9a9aa6}
+.pg::after{content:'PAGE ' counter(pg);position:absolute;right:.36in;top:.16in;font-size:7pt;letter-spacing:.2em;color:#6b6b76;font-weight:700}
+.foot{position:absolute;left:.36in;right:.36in;bottom:.3in;border-top:1px solid #2a2a31;padding-top:8px;font-size:8.5pt;color:#9a9aa6}
 .pill{font-weight:800;letter-spacing:.1em;font-size:7.5pt;background:#1f0d10;border:1px solid #4a1a1f;color:#ff4d5a;padding:2px 8px;border-radius:99px;margin-right:4px}
 .pill.free{background:#0d1f14;border-color:#1f4a2c;color:#6ee7a0}
 .cover{background:radial-gradient(ellipse at 80% 100%,rgba(229,34,47,.35),transparent 60%),#09090b;display:flex;flex-direction:column;justify-content:center}
