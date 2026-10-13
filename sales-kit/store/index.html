@@ -172,7 +172,7 @@ function card(item,isBundle){
   return '<div class="card'+(isBundle?' bundle':'')+'"><img src="'+img+'" alt="'+item.name+' cover" loading="lazy"><div class="b">'
    +(isBundle?'<span class="save">SAVE '+Math.round(100-100*item.price/item.listTotal)+'%</span>':'')
    +'<div class="tag">'+item.tag+(item.pages?' &middot; '+item.pages+' pages':'')+'</div><h3>'+item.name+'</h3><p>'+item.tagline+'</p>'
-   +'<ul>'+item.bullets.map(b=>'<li>'+b+'</li>').join('')+'</ul><div class="price">'+price+'</div>'+btn(item)+'</div></div>';
+   +'<ul>'+item.bullets.map(b=>'<li>'+b+'</li>').join('')+'</ul><div class="price">'+price+'</div>'+btn(item)+'<a href="../pages/'+item.id+'.html" style="display:block;margin-top:10px;text-align:center;color:#ff4d5a;font-size:14px;text-decoration:none">See details &rarr;</a></div></div>';
 }
 document.getElementById('freeGrid').innerHTML = CONFIG.items.filter(i=>i.price===0).map(i=>card(i,false)).join('');
 ['all','him','her'].forEach(g=>{document.getElementById('grid_'+g).innerHTML = CONFIG.items.filter(i=>i.price>0&&i.group===g).map(i=>card(i,false)).join('');});
