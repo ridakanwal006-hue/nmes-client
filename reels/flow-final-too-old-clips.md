@@ -1,4 +1,13 @@
-# Google Flow: "She said you're too old" (final: ek hi character, zoom nahi, awaaz ka bayan)
+# Google Flow v3: "She said you're too old" (seedha camera mein, koi host nahi, ruk ruk ke nahi)
+
+## ! Pichli clips mein kya galat tha (v3 mein theek kiya)
+- Dorian **kisi host ya interviewer se baat kar raha tha** (nazar aur sar side mein), camera se nahi. Wajah: start frame wahi **poori podcast wali photo** thi (wide shot, microphone, armchair). Flow ne use "interview" samjha.
+- Wo **ruk ruk ke** bolta tha, lambe waqfe ke saath.
+- Beech mein ek **dusri awaaz** ("Yeah") aayi, jo host ki lagti thi.
+
+**Is dafa fix:** (1) start frame **`dorian-closeup-start-frame.png`** (chest-up, camera ki taraf dekhta hua), wide photo nahi. (2) Prompt mein "akela hai, koi host ya interviewer nahi, har pal lens mein dekhta hai". (3) "continuous flow, chhote waqfe". (4) Setting se microphone aur podcast ka zikr hata diya.
+
+---
 
 ## Kaise use karein
 1. Flow mein **Frames to Video** chunein. **Har clip ke liye wahi ek start frame** lagayein: `reels/dorian-closeup-start-frame.png` (baal wala Dorian, chest-up). Pichli clip ka aakhri frame agli clip mein mat dein, isse chehra badalne lagta hai.
@@ -19,13 +28,13 @@ CHARACTER (identical in every clip): Dorian Wolfe, a man in his late 40s. Thick 
 
 CAMERA: vertical 9:16, medium close-up, chest up, exactly like the reference image. Completely locked-off tripod shot. NO zoom, NO push-in, NO pull-out, NO camera movement, NO cuts, NO dissolve, NO wide shot. The framing stays exactly the same from the first frame to the last.
 
-SETTING: dark moody room, warm amber light strips and shelves softly out of focus behind him, a studio microphone on an arm at the right edge of the frame, one soft key light on his face, subtle film grain.
+SETTING: dark moody room, warm amber light strips and shelves softly out of focus behind him, one soft key light on his face, subtle film grain. No microphone visible, not a podcast, not an interview.
 
-VOICE (the exact same voice in every clip): a deep, resonant, warm adult male baritone with a full chest tone and a very slight natural gravel, like a calm audiobook narrator speaking to one person across a table. Median pitch about 103 Hz (low), settling to about 75 to 80 Hz at the end of sentences and rising to about 140 Hz only on emphasis. Natural conversational pace, about 155 words per minute, with a pause of about half a second between sentences. Calm, confident, intimate, never shouting, never announcer-like, never dramatic. Neutral American accent. Close-microphone, dry, clean sound. No echo, no reverb, no chorus or doubled voice, no robotic or processed tone, no pitch effects, no music, no sound effects.
+VOICE (the exact same voice in every clip): a deep, resonant, warm adult male baritone with a full chest tone and a very slight natural gravel, like a calm audiobook narrator speaking to one person across a table. Median pitch about 103 Hz (low), settling to about 75 to 80 Hz at the end of sentences and rising to about 140 Hz only on emphasis. Natural conversational pace, about 155 words per minute, flowing and continuous, with only short pauses of about a quarter of a second between sentences, never halting. Calm, confident, intimate, never shouting, never announcer-like, never dramatic. Neutral American accent. Close-microphone, dry, clean sound. No echo, no reverb, no chorus or doubled voice, no robotic or processed tone, no pitch effects, no music, no sound effects.
 
-PERFORMANCE: calm, serious, warm. Small natural head movements, minimal hand movement, lips perfectly synced to the speech. He does not smile broadly.
+PERFORMANCE: He is completely alone in the room, speaking directly to the viewer through the lens. He looks straight into the camera lens the entire time, steady eye contact, never glancing to the side, never looking at anyone off-screen, no host, no interviewer, no second person, no second voice, no one answering or reacting. Serious, calm and natural, like a real man talking to one person he respects. His delivery is continuous and flowing: he does not stop and start, he does not hesitate between words, and there are only short natural pauses (about a quarter of a second) between sentences. Minimal hand movement, head mostly still, lips perfectly synced. He does not smile broadly.
 
-DO NOT: add on-screen text, captions, subtitles, logos, music, other people, or a different voice. Do not change his hair, face or suit.
+DO NOT: add on-screen text, captions, subtitles, logos, music, other people, a host, an interviewer, any second voice, or a different voice. Do not change his hair, face or suit.
 ```
 
 ## Clip prompts
