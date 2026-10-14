@@ -131,8 +131,8 @@ else:
 z = '1' + ''.join(f"+0.22*clip((t-{a})/0.35,0,1)*clip(({b}-t)/0.35,0,1)" for a, b in punch)
 vf = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
       f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,"
-      "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,"
-      + ('' if cfg.get('no_glitch') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
+      + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
+      ('' if cfg.get('no_glitch') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
       f"negate=enable='between(t,{glitch+0.1},{glitch+0.16})',"
       f"eq=brightness=0.45:enable='between(t,{glitch+0.16},{glitch+0.2})',") +
       f"ass={tmp}/cap.ass:fontsdir=/usr/share/fonts")
