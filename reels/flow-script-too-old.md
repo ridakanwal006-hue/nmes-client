@@ -3,6 +3,15 @@
 Paste-ready for Google Flow. Poori script, awaaz ki hidayat (voice lock) aur 5 clips ke prompts ek file mein hain.
 Character Dorian Wolfe hai (AI-generated). Flow ko **character ki photo** bhi do (Ingredients / start frame), warna chehra har clip mein badal jayega.
 
+## ! Baal (hair) ka masla: pehle ye padhein
+Aap ki photo mein Dorian ke **baal hain** (peechay ki taraf swept-back, kaale aur grey), lekin mere prompt mein likha tha "completely bald". Isi wajah se Flow ne shuru ke 1-3 second photo jaisa (baal wala) shot banaya, aur baad mein **ganja** close-up. Edit mein ye do alag aadmi lagte hain.
+
+Do tareeke, ek chunein aur MASTER LOCK mein CHARACTER line badal dein:
+- **A (photo ke mutabiq, baal wala):** `A man in his late 40s with thick swept-back dark hair graying at the temples, a short well-groomed salt-and-pepper beard, calm direct eyes. Dark charcoal three-piece suit, white open-collar shirt, no tie. Looks exactly like the reference photo.`
+- **B (ganja Dorian):** pehle aisi photo banwayein jis mein wo ganja ho, aur wahi reference mein dein. Phir prompt mein "completely bald head" rakhein.
+
+Dono clips mein start frame aur prompt ka chehra **ek jaisa** hona chahiye.
+
 ---
 
 ## 0. Kaise use karein (Roman Urdu)
