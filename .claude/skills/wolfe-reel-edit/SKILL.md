@@ -32,3 +32,8 @@ Run `python3 -I scripts/analyze_reference_edit.py reel.mp4` (needs ffmpeg and nu
 - Put "AI-generated character" in the post caption, not on the video.
 - Font is Inter (Poppins is not installed). Say so if the user asks about it.
 - Be honest about what was not checked by ear or by transcript.
+
+## Optional config flags (added for clips with their own audio)
+- `"clean_audio": true`: voice only. No drone bed, no whoosh/zap. Use when the user hears "doubling" or echo.
+- `"no_glitch": true`: no glitch flash. `"punch": []`: no zoom-ins. `"captions_from_start": true`: word captions also during the hook. `"hook_y": 1030`: move the typed hook below the face.
+- For Flow/Veo clips: cut only on the clean close-up frames. Veo starts each clip from the reference photo and morphs to the prompt look, so check the first 1 to 4 seconds of every clip for hair, face or background changes before joining.
