@@ -82,13 +82,20 @@ for i, (t, _) in enumerate(hits):
     add("aevalsrc='0.9*sin(2*PI*(45+60*exp(-9*t))*t)':d=0.7:s=48000", "afade=t=out:st=0.1:d=0.6,volume=0.7", t, f'hit{i}')
 ins = f'-i "{tmp}/voice.wav" -i "{tmp}/bed.wav" ' + ' '.join(f'-i "{p}"' for p, _ in sfx)
 CLEAN = bool(cfg.get('clean_audio'))   # voice only: no bed, no whoosh/zap (avoids any echo or doubled sound)
-if CLEAN: sfx = []
+if CLEAN and not cfg.get('sfx_only'): sfx = []
 fc = "[0:a]asplit=2[v][vsc];[1:a]volume=-24dB[b0];[b0][vsc]sidechaincompress=threshold=0.02:ratio=8:attack=20:release=400[bd]"
 labs = ['[v]', '[bd]']
 for i, (_, t) in enumerate(sfx):
     fc += f";[{i+2}:a]adelay={int(t*1000)}|{int(t*1000)},volume=-8dB[s{i}]"; labs.append(f'[s{i}]')
-if CLEAN: fc = "[0:a]loudnorm=I=-14:TP=-1.5:LRA=7[a]"; ins = f'-i "{tmp}/voice.wav"'
-else: fc += f";{''.join(labs)}amix=inputs={len(labs)}:normalize=0,loudnorm=I=-14:TP=-1.0:LRA=7[a]"
+SFXO = bool(cfg.get('sfx_only'))   # voice + whoosh/zap/hits only: no drone bed, no ducking
+if SFXO:
+    ins = f'-i "{tmp}/voice.wav" ' + ' '.join(f'-i "{p}"' for p, _ in sfx)
+    fc = '[0:a]anull[v]'; labs = ['[v]']
+    for i, (_, t) in enumerate(sfx):
+        fc += f";[{i+1}:a]adelay={int(t*1000)}|{int(t*1000)},volume=-8dB[s{i}]"; labs.append(f'[s{i}]')
+    fc += f";{''.join(labs)}amix=inputs={len(labs)}:normalize=0,loudnorm=I=-14:TP=-1.0:LRA=7[a]"
+elif CLEAN: fc = "[0:a]loudnorm=I=-14:TP=-1.5:LRA=7[a]"; ins = f'-i "{tmp}/voice.wav"'
+elif not SFXO: fc += f";{''.join(labs)}amix=inputs={len(labs)}:normalize=0,loudnorm=I=-14:TP=-1.0:LRA=7[a]"
 run(f'ffmpeg -y -loglevel error {ins} -filter_complex "{fc}" -map "[a]" -t {dur} "{tmp}/mix.wav"')
 # ---- captions (ASS)
 def ts(t): return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
@@ -128,7 +135,7 @@ else:
     src = (f'-f lavfi -i "color=c=0x0a0a0c:s=1080x1920:r=30:d={dur},'
            "drawtext=fontfile=/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf:text='WOLFE':fontsize=260:fontcolor=white@0.05:x=(w-text_w)/2:y=1500,"
            "drawtext=fontfile=/usr/share/fonts/opentype/inter/Inter-Medium.otf:text='PREVIEW - character clip goes here':fontsize=34:fontcolor=white@0.35:x=(w-text_w)/2:y=120\"")
-z = '1' + ''.join(f"+0.22*clip((t-{a})/0.35,0,1)*clip(({b}-t)/0.35,0,1)" for a, b in punch)
+z = '1' + ''.join(f"+{cfg.get('punch_amt', 0.22)}*clip((t-{a})/0.35,0,1)*clip(({b}-t)/0.35,0,1)" for a, b in punch)
 vf = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
       f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,"
       + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
