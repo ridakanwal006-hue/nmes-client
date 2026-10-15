@@ -125,8 +125,9 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
  "Style: Body,Inter SemiBold,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,0,0,1,0,3,5,60,60,0,1",
  "", "[Events]", "Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text"]
 for i, line in enumerate(cfg['hook_red']):
-    y = cfg.get('hook_y', 880) + i * 112; st = i * 0.85 + 0.1
-    ass += type_events(line, y, st, hook_end, 0.05)
+    y = cfg.get('hook_y', 880) + i * 112
+    tdt = cfg.get('type_dt', 0.05); st = 0.1 + sum(len(l) * tdt + 0.18 for l in cfg['hook_red'][:i])   # each line starts when the previous finished typing
+    ass += type_events(line, y, st, hook_end, tdt)
 for i, line in enumerate(cfg['hook_sub']):
     ass.append(f"Dialogue: 1,{ts(2.0)},{ts(hook_end)},Sub,,0,0,0,,{{\\pos(540,{1200 + i*76})\\fad(200,150)}}{line}")
 for t, label in hits:   # red typed callout, ~1.3 s, at about 56% height
@@ -134,7 +135,7 @@ for t, label in hits:   # red typed callout, ~1.3 s, at about 56% height
 for i, (w, a, b) in enumerate(W):
     if a < hook_end and not cfg.get('captions_from_start'): continue
     end = min(b + 0.06, W[i+1][1] if i + 1 < len(W) else b + 0.3)
-    ass.append(f"Dialogue: 0,{ts(a)},{ts(max(end, a + 0.12))},Body,,0,0,0,,{{\\pos(540,1250)}}{w}")
+    ass.append(f"Dialogue: 0,{ts(a)},{ts(max(end, a + 0.12))},Body,,0,0,0,,{{\\pos(540,1250)\\fscx{'80' if cfg.get('pop') else '100'}\\fscy{'80' if cfg.get('pop') else '100'}\\t(0,110,\\fscx100\\fscy100)}}{w}")
 open(f'{tmp}/cap.ass', 'w').write('\n'.join(ass))
 # ---- video
 if clip: src = f'-i "{clip}"'
