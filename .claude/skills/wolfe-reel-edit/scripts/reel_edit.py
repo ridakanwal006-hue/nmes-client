@@ -21,6 +21,7 @@ for a, b in sil:
     if a - t0 > 0.05: segs.append((t0, a))
     t0 = b
 if dur - t0 > 0.05: segs.append((t0, dur))
+if cfg.get('speech_segs'): segs = [tuple(x) for x in cfg['speech_segs']]   # explicit speech spans (noisy clips where silencedetect fails)
 seg_len = [b - a for a, b in segs]; total = sum(seg_len)
 def syl(w):
     w = re.sub(r'[^a-z]', '', w.lower()); n = len(re.findall(r'[aeiouy]+', w))
@@ -52,6 +53,10 @@ bounds = []; k = m
 for j in range(n, 0, -1):
     i = back[j][k]; bounds.append((i, k)); k = i
 bounds.reverse()
+if cfg.get('seg_text'):   # explicit text per speech span (bypasses the DP); must cover the whole script
+    words = ' '.join(cfg['seg_text']).split(); bounds = []; i = 0
+    for t in cfg['seg_text']: bounds.append((i, i + len(t.split()))); i += len(t.split())
+    sy = [syl(w) for w in words]
 W = []
 for (i, k), (a0, b0) in zip(bounds, segs):
     tot = sum(sy[i:k]) or 1; c0 = 0
