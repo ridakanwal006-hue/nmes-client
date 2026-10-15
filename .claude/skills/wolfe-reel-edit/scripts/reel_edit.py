@@ -83,6 +83,8 @@ def add(lavfi, af, t, name):
     run(f'ffmpeg -y -loglevel error -f lavfi -i "{lavfi}" -af "{af}" -ar 48000 "{tmp}/{name}.wav"'); sfx.append((f'{tmp}/{name}.wav', t))
 add("anoisesrc=d=0.9:c=white:a=0.5", "highpass=f=1500,afade=t=in:d=0.5,afade=t=out:st=0.5:d=0.4,volume=0.6", max(glitch - 0.6, 0), 'whoosh')
 add("aevalsrc='0.9*sin(2*PI*(60+900*exp(-14*t))*t)':d=0.5:s=48000", "afade=t=out:st=0.2:d=0.3", glitch, 'zap')
+for j, t in enumerate(cfg.get('whoosh_at', [])):   # extra soft whooshes at section changes
+    add("anoisesrc=d=0.8:c=pink:a=0.5", "highpass=f=1200,afade=t=in:d=0.45,afade=t=out:st=0.45:d=0.35,volume=0.45", max(t, 0), f'wh{j}')
 for i, (t, _) in enumerate(hits):
     add("aevalsrc='0.9*sin(2*PI*(45+60*exp(-9*t))*t)':d=0.7:s=48000", "afade=t=out:st=0.1:d=0.6,volume=0.7", t, f'hit{i}')
 ins = f'-i "{tmp}/voice.wav" -i "{tmp}/bed.wav" ' + ' '.join(f'-i "{p}"' for p, _ in sfx)
