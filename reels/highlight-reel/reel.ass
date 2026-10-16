@@ -1,0 +1,54 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:25.82,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,25819,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:01.12,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Scroll{\fs80}{\c&HFFFFFF&} for\N{\fs104}{\c&H00D7FF&}five minutes{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.14,0:00:01.72,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and you'll\Nbelieve
+Dialogue: 0,0:00:01.74,0:00:02.40,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Everyone{\fs80}{\c&HFFFFFF&} has it
+Dialogue: 0,0:00:02.42,0:00:02.92,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}figured out.
+Dialogue: 0,0:00:02.94,0:00:03.32,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}The {\fs104}{\c&H00D7FF&}job{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:03.34,0:00:03.96,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}partner{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:03.98,0:00:04.56,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}plan{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:04.58,0:00:05.09,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Then you\Nlook
+Dialogue: 0,0:00:05.11,0:00:05.79,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}at your own\N{\fs104}{\c&H00D7FF&}life{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.81,0:00:06.20,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and think,
+Dialogue: 1,0:00:06.22,0:00:07.08,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}WHAT'S WRONG\N{\c&H00D7FF&}WITH ME?
+Dialogue: 0,0:00:07.10,0:00:07.61,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Why am I
+Dialogue: 0,0:00:07.63,0:00:08.56,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}still {\fs104}{\c&H00D7FF&}figuring{\fs80}{\c&HFFFFFF&}\Nit out?
+Dialogue: 0,0:00:08.58,0:00:09.27,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}But {\fs104}{\c&H00D7FF&}nobody{\fs80}{\c&HFFFFFF&}\Nposts
+Dialogue: 0,0:00:09.29,0:00:09.77,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}panic{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.79,0:00:10.36,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}at 2 a.m.
+Dialogue: 0,0:00:10.38,0:00:11.07,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Nobody{\fs80}{\c&HFFFFFF&} posts
+Dialogue: 0,0:00:11.09,0:00:11.96,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}rejection{\fs80}{\c&HFFFFFF&}\Nemails.
+Dialogue: 0,0:00:11.98,0:00:12.77,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You're\N{\fs104}{\c&H00D7FF&}comparing{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.79,0:00:13.64,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs104}{\c&H00D7FF&}raw{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.66,0:00:14.33,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}footage{\fs80}{\c&HFFFFFF&} to\Ntheir
+Dialogue: 1,0:00:14.38,0:00:14.88,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}FINAL\N{\c&H00D7FF&}CUT.
+Dialogue: 0,0:00:14.90,0:00:15.49,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Being {\fs104}{\c&H00D7FF&}lost{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.51,0:00:16.24,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}isn't {\fs104}{\c&H00D7FF&}failure{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:16.26,0:00:16.91,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}it's the part
+Dialogue: 0,0:00:16.93,0:00:17.80,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}before the\N{\fs104}{\c&H00D7FF&}finding{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:17.82,0:00:18.65,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Everyone{\fs80}{\c&HFFFFFF&} you\N{\fs104}{\c&H00D7FF&}admire{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.67,0:00:19.25,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}was once
+Dialogue: 0,0:00:19.27,0:00:20.52,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}exactly where\Nyou are.
+Dialogue: 0,0:00:20.54,0:00:21.47,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So stop\N{\fs104}{\c&H00D7FF&}measuring{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.49,0:00:22.47,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs104}{\c&H00D7FF&}behind{\fs80}{\c&HFFFFFF&}\N{\fs104}{\c&H00D7FF&}the scenes{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.49,0:00:23.07,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}against\Ntheir
+Dialogue: 0,0:00:23.09,0:00:23.92,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}highlights{\fs80}{\c&HFFFFFF&}.
+Dialogue: 1,0:00:23.94,0:00:24.67,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}YOUR\N{\c&H00D7FF&}TIMELINE
+Dialogue: 0,0:00:24.69,0:00:25.80,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}is still being\N{\fs104}{\c&H00D7FF&}written{\fs80}{\c&HFFFFFF&}.
