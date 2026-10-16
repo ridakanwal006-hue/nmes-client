@@ -1,0 +1,40 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:20.94,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,20940,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:00.73,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You asked {\fs104}{\c&H00D7FF&}five{\fs80}{\c&HFFFFFF&}\Npeople
+Dialogue: 0,0:00:00.75,0:00:01.46,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}what to {\fs104}{\c&H00D7FF&}do{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:01.48,0:00:01.97,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Got {\fs104}{\c&H00D7FF&}five{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.99,0:00:02.78,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}different\N{\fs104}{\c&H00D7FF&}answers{\fs80}{\c&HFFFFFF&}.
+Dialogue: 1,0:00:02.80,0:00:03.69,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}MORE\N{\c&H00D7FF&}CONFUSED
+Dialogue: 0,0:00:03.71,0:00:04.22,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}than before.
+Dialogue: 0,0:00:04.24,0:00:04.91,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}That's what\Nhappens
+Dialogue: 0,0:00:04.93,0:00:05.71,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}when you\N{\fs104}{\c&H00D7FF&}outsource{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.73,0:00:06.50,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}your {\fs104}{\c&H00D7FF&}decisions{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:06.52,0:00:07.59,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You {\fs104}{\c&H00D7FF&}collect{\fs80}{\c&HFFFFFF&}\Nopinions
+Dialogue: 0,0:00:07.61,0:00:09.04,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}hoping one\Nof them
+Dialogue: 0,0:00:09.08,0:00:10.22,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}feels like\N{\fs104}{\c&H00D7FF&}certainty{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:10.24,0:00:11.53,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}But no amount\Nof {\fs104}{\c&H00D7FF&}advice{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.55,0:00:12.62,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}replaces\N{\fs104}{\c&H00D7FF&}self-trust{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:12.64,0:00:13.94,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You already know\Nwhat you {\fs104}{\c&H00D7FF&}want{\fs80}{\c&HFFFFFF&}.
+Dialogue: 1,0:00:13.96,0:00:15.18,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}YOU'RE JUST\N{\c&H00D7FF&}SCARED TO OWN IT.
+Dialogue: 0,0:00:15.20,0:00:16.02,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}So {\fs104}{\c&H00D7FF&}decide{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:16.04,0:00:17.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}One {\fs104}{\c&H00D7FF&}voice{\fs80}{\c&HFFFFFF&}\Nmatters here,
+Dialogue: 1,0:00:17.28,0:00:17.98,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}YOURS.
+Dialogue: 0,0:00:18.00,0:00:19.44,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Wrong decisions\N{\fs104}{\c&H00D7FF&}teach{\fs80}{\c&HFFFFFF&}.
+Dialogue: 1,0:00:19.46,0:00:20.92,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}NO DECISIONS\N{\c&H00D7FF&}JUST TRAP.
