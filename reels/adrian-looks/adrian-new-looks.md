@@ -35,3 +35,35 @@ He talks in a relaxed, natural conversational way, like chatting with a friend. 
 lips only slightly parted, no exaggerated or wide mouth opening, no big smile while speaking, calm even pace.
 His eyes stay on the host sitting just off-screen to the right of the camera the whole time; he never looks
 into the camera lens. Gentle small head nods, soft eyebrow movement, one hand gesture at most.
+
+# ---- UNIQUE LOOKS (naye, attention-grabbing) - har prompt ke shuru mein CHEHRA LOCK paste karo ----
+
+## LOOK D - Rooftop golden hour
+Wearing an olive green bomber jacket over a black tee. Podcast microphone on a boom arm set up on a rooftop
+terrace, city skyline glowing in golden-hour sunset behind him, warm orange rim light on his curls, a small
+wooden table with a glass of water. Medium shot, chest up, relaxed, looking off-camera to the right.
+
+## LOOK E - Neon night studio
+Wearing a black leather jacket over a charcoal turtleneck. Dark podcast studio with soft pink and blue neon
+tube lights on the wall behind him, subtle haze, glossy black table, boom microphone. Cinematic teal and
+magenta colour grade, medium shot, chest up, calm intense expression.
+
+## LOOK F - Minimal white loft
+Wearing an oversized off-white linen shirt, top button open. Bright minimal white loft, huge window, a single
+green plant, light grey concrete table, boom microphone. Soft natural daylight, clean airy look, medium shot,
+chest up, gentle half-smile.
+
+## LOOK G - Cozy cabin / fireplace
+Wearing a chunky cream cable-knit sweater. Wooden cabin interior, stone fireplace with a real fire glowing
+softly behind him, warm candles on the table, boom microphone. Warm amber light on his face, medium shot, chest
+up, thoughtful look.
+
+## LOOK H - Luxury hotel lounge
+Wearing a navy double-breasted blazer over a white open-collar shirt. Upscale hotel lounge with dark green
+velvet armchairs, brass lamps, marble coffee table, boom microphone, soft bokeh lights. Elegant and confident,
+medium shot, chest up.
+
+## LOOK I - Bookstore cafe
+Wearing a rust-orange crew-neck sweater with a white collar showing. Cosy bookstore cafe, tall wooden shelves
+full of books, a coffee cup on the table, hanging warm lights, boom microphone. Friendly warm tones, medium
+shot, chest up.
