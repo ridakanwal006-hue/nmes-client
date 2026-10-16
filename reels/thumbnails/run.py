@@ -16,4 +16,5 @@ jobs = [
 ]
 for n, src, t, crop, face, lines in jobs:
     cover(src, t, crop, face, 1.1, lines, f"cov_{n}.jpg")
+cover(SC+"d29/b.mp4", 6.2, "720:962:0:40", (660, 880), 1.1, [("YOU HAD", False), ("THE", True), ("ANSWER", True)], "cov_spoke-first.jpg")
 print("done")

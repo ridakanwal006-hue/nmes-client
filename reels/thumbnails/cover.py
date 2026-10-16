@@ -14,7 +14,7 @@ def fit(draw, text, size, maxw):
         if draw.textlength(text, font=f) <= maxw: return f
         size -= 4
     return f
-def cover(src, t, crop, face, zoom, lines, out, ycenter=1400):
+def cover(src, t, crop, face, zoom, lines, out, ycenter=1560):
     tmp = out + ".raw.png"
     frame(src, t, crop, face, zoom, tmp)
     im = Image.open(tmp).convert("RGB")
