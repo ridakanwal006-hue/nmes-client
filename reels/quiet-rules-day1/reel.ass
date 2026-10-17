@@ -1,0 +1,34 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:14.12,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,14119,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.05,0:00:09.71,Label,,0,0,0,,{\pos(540,130)}THE UNSENT DRAFT
+Dialogue: 0,0:00:09.81,0:00:14.07,Label,,0,0,0,,{\pos(540,130)}THE QUIET RULES  -  RULE 1
+Dialogue: 0,0:00:00.00,0:00:01.11,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You {\fs104}{\c&H00D7FF&}type{\fs80}{\c&HFFFFFF&} the\Nmessage,
+Dialogue: 0,0:00:01.12,0:00:02.43,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}read it {\fs104}{\c&H00D7FF&}five{\fs80}{\c&HFFFFFF&} times,
+Dialogue: 0,0:00:02.44,0:00:03.47,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}change {\fs104}{\c&H00D7FF&}one word{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:03.48,0:00:05.03,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}then {\fs104}{\c&H00D7FF&}close{\fs80}{\c&HFFFFFF&} the app.
+Dialogue: 0,0:00:05.04,0:00:05.91,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}An hour later
+Dialogue: 0,0:00:05.93,0:00:06.82,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you opened it\N{\fs104}{\c&H00D7FF&}again{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:06.84,0:00:07.61,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}still {\fs104}{\c&H00D7FF&}staring{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.63,0:00:08.61,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}at the same\N{\fs104}{\c&H00D7FF&}grey{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:08.63,0:00:09.74,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}unsent{\fs80}{\c&HFFFFFF&} text.
+Dialogue: 0,0:00:09.76,0:00:10.42,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Rule 1{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:10.44,0:00:11.70,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}send the {\fs104}{\c&H00D7FF&}rough{\fs80}{\c&HFFFFFF&}\Nversion.
+Dialogue: 0,0:00:11.72,0:00:12.66,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Rough{\fs80}{\c&HFFFFFF&} and sent
+Dialogue: 0,0:00:12.68,0:00:14.10,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}beats {\fs104}{\c&H00D7FF&}perfect{\fs80}{\c&HFFFFFF&}\Nand {\fs104}{\c&H00D7FF&}stuck{\fs80}{\c&HFFFFFF&}.
