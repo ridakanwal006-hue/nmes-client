@@ -26,7 +26,6 @@ def cap(c, a, b, text, **k): E.cap(T(c, a), T(c, b) - .01, text, **k)
 def pop(c, a, b, text, **k): E.pop(T(c, a), T(c, b) - .01, text, **k)
 E.ev.append(f"Dialogue: 3,{ts(0)},{ts(TOTAL)},Line,,0,0,0,,{{\\an7\\pos(0,0)\\p1\\1c&H00D7FF&\\fscx0\\t(0,{int(TOTAL * 1000)},\\fscx100)}}m 0 0 l 1080 0 1080 12 0 12{{\\p0}}")
 # series labels (top): title of the reel, then the rule number
-E.label(T("x2", .52) + .05, T("x3", 5.64) - .05, "THE UNSENT DRAFT", x=False, y=130)
 E.label(T("x1", .20) + .05, TOTAL - .05, "THE QUIET RULES  -  RULE 1", x=False, y=130)
 # x2 the draft
 cap("x2", .52, 1.64, f"You {K('type')} the\\Nmessage,")

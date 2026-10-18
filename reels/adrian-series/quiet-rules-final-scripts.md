@@ -7,8 +7,8 @@ Same man, same black sweater, same dark spotlight studio as the reference image.
 off-screen to the right of the camera; he looks at the host the whole time and never into the camera lens.
 ENERGY: LOW and calm, reflective, quietly honest, like a late-night conversation. Not excited, no big smile, no
 laughing, no raised eyebrows, no head bobbing, no hand waving. Voice low and soft, slow-to-normal pace, small
-natural pauses. MOUTH: small and subtle, lips only slightly parted, teeth barely visible, no wide open mouth.
-Still posture, one slow small nod at most. Static camera, medium shot, no text, no subtitles, no music.
+natural pauses. He speaks softly, almost murmuring, barely moving his lips, like speaking quietly across a table
+at night; the mouth never opens wide, no teeth showing, no smile. Still posture, one slow small nod at most. Static camera, medium shot, no text, no subtitles, no music.
 
 ## DAY 1 - Overthinking
 A: He says exactly: "You typed the message, read it five times, changed one word, then closed the app."
