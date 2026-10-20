@@ -1,65 +1,115 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
 @page { size: A4; margin: 0 }
+:root{--g:#0e3b2b;--g2:#0a2c20;--gold:#f0d24a;--cream:#f6f0e1;--ink:#17261f}
 *{box-sizing:border-box}
-body{margin:0;font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;color:#1c1c1c;background:#fff}
-.page{width:210mm;height:297mm;padding:18mm 17mm;position:relative;page-break-after:always;background:#faf6ef}
+body{margin:0;font-family:"Liberation Serif","Times New Roman",serif;color:var(--ink)}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always}
 .page:last-child{page-break-after:auto}
-.tag{display:inline-block;background:#111;color:#ffd700;font-weight:800;font-size:10pt;letter-spacing:.12em;padding:6px 12px;border-radius:4px}
-h1{font-size:30pt;line-height:1.1;margin:14mm 0 4mm;font-weight:900}
-h1 span{color:#c98a00}
-.sub{font-size:12pt;color:#555;margin:0 0 9mm}
-p{font-size:11.5pt;line-height:1.55;margin:0 0 5mm}
-.box{background:#111;color:#fff;border-radius:10px;padding:7mm 8mm;margin:7mm 0}
-.box b{color:#ffd700}
-.step{display:flex;gap:5mm;margin:0 0 6mm}
-.num{flex:0 0 11mm;height:11mm;border-radius:50%;background:#ffd700;color:#111;font-weight:900;font-size:13pt;display:flex;align-items:center;justify-content:center}
-.step h3{margin:0 0 1.5mm;font-size:13pt}
-.step p{margin:0;font-size:11pt}
-.mins{color:#c98a00;font-weight:700}
-ul{margin:2mm 0 0 5mm;padding:0}li{font-size:11pt;line-height:1.5;margin:0 0 1.5mm}
-.line{border-bottom:1.5px solid #bdb6a8;height:9mm}
-.row{margin-bottom:5mm}.row label{font-weight:800;font-size:10.5pt;display:block;margin-bottom:1mm}
-.foot{position:absolute;left:17mm;right:17mm;bottom:12mm;font-size:9.5pt;color:#777;display:flex;justify-content:space-between}
-.cta{border:2px solid #111;border-radius:10px;padding:6mm 7mm;margin-top:8mm}
-.cta b{font-size:13pt}
+.green{background:var(--g);color:#fff}
+.cream{background:var(--cream)}
+.frame{position:absolute;inset:9mm;border:1.2px solid var(--gold);pointer-events:none}
+.frame2{position:absolute;inset:11mm;border:.5px solid rgba(240,210,74,.55);pointer-events:none}
+.sans{font-family:"Montserrat",Arial,sans-serif}
+.lab{font-family:"Montserrat",Arial,sans-serif;font-weight:700;letter-spacing:.28em;font-size:8pt;color:var(--gold);text-transform:uppercase}
+.center{text-align:center}
+.photo{width:46mm;height:46mm;border-radius:50%;border:1.5px solid var(--gold);object-fit:cover;object-position:50% 28%;display:block;margin:0 auto}
+h1.t{font-size:44pt;line-height:1.08;margin:0;font-weight:700}
+h1.t i{color:var(--gold)}
+.rule{width:30mm;height:1.5px;background:var(--gold);margin:9mm auto}
+.tag{font-style:italic;font-size:13pt;line-height:1.5;color:#e9e3d0;margin:0 22mm}
+.badge{display:inline-block;margin-top:10mm;background:var(--gold);color:var(--g2);font-family:"Montserrat",Arial,sans-serif;font-weight:800;font-size:9pt;letter-spacing:.2em;padding:7px 16px;border-radius:30px}
+.foot{position:absolute;left:17mm;right:17mm;bottom:15mm;font-family:"Montserrat",Arial,sans-serif;font-size:7.5pt;letter-spacing:.18em;color:var(--gold);display:flex;justify-content:space-between}
+.pad{padding:26mm 24mm 0}
+h2{font-size:36pt;line-height:1.1;margin:5mm 0 8mm;font-weight:700}
+h2 i{color:#b8860b}
+.lead{font-size:15.5pt;line-height:1.6;margin:0 0 9mm}
+.quote{border-left:3px solid var(--gold);background:#fffdf4;padding:8mm 8mm;font-size:16pt;font-style:italic;line-height:1.5;margin:8mm 0 9mm;color:var(--g)}
+.step{display:flex;gap:6mm;margin:0 0 8.5mm}
+.n{flex:0 0 13mm;height:13mm;border-radius:50%;background:var(--g);color:var(--gold);font-weight:700;font-size:16pt;display:flex;align-items:center;justify-content:center}
+.step h3{margin:0 0 1.5mm;font-size:19pt}
+.step h3 span{font-family:"Montserrat",Arial,sans-serif;font-size:8pt;letter-spacing:.14em;color:#8a6d00;font-weight:700;margin-left:3mm}
+.step p{margin:0;font-size:14pt;line-height:1.55}
+.card{background:var(--g);color:#fff;border-radius:6px;padding:8mm 9mm;margin:6mm 0}
+.card b{color:var(--gold)}
+.row{margin:0 0 7mm}.row .q{font-family:"Montserrat",Arial,sans-serif;font-weight:700;font-size:8.5pt;letter-spacing:.14em;color:var(--g);text-transform:uppercase}
+.line{border-bottom:1.3px solid #9aa99f;height:10mm}
+.three{display:flex;gap:6mm;margin:8mm 0}
+.three>div{flex:1;text-align:center;border:1px solid rgba(240,210,74,.6);border-radius:6px;padding:6mm 3mm}
+.three .big{font-size:28pt;color:var(--gold);line-height:1}
+.three .s{font-family:"Montserrat",Arial,sans-serif;font-weight:700;letter-spacing:.16em;font-size:8pt;margin-top:3mm}
+ul.chk{list-style:none;margin:7mm 0;padding:0}
+ul.chk li{font-size:15.5pt;line-height:1.45;padding-left:10mm;position:relative;margin:0 0 5mm}
+ul.chk li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.btn{display:block;background:var(--gold);color:var(--g2);text-align:center;font-family:"Montserrat",Arial,sans-serif;font-weight:800;font-size:13pt;letter-spacing:.06em;padding:6mm 0;border-radius:6px;text-decoration:none;margin:16mm 22mm 5mm}
+.url{text-align:center;font-family:"Montserrat",Arial,sans-serif;font-size:8.5pt;color:#cfd8cf;letter-spacing:.04em}
 </style></head><body>
-<div class="page">
- <span class="tag">SELF-DOUBT TO SELF-TRUST &nbsp;|&nbsp; LESSON 1 (FREE)</span>
- <h1>The Voice Isn't <span>a Fact</span></h1>
- <p class="sub">A 5-minute lesson on the first thing you can do about self-doubt.</p>
- <p>Self-doubt sounds like the truth for one simple reason: it's the voice you have listened to the longest. It says <i>"you're not ready"</i>, <i>"they'll think it's stupid"</i>, <i>"everyone else has it figured out"</i>, and because you've heard it for years, it feels like a fact.</p>
- <p>It isn't. It's a habit of thought. And a habit can be tested.</p>
- <div class="box"><b>Today's goal is not to silence the voice.</b><br>It's to stop letting it make your decisions. Doubt can ride along. It just doesn't get the wheel.</div>
 
- <div class="step"><div class="num">1</div><div><h3>Catch it <span class="mins">(2 min)</span></h3>
- <p>Write down 3 doubts you told yourself this week, word for word, the way the voice actually says them.</p></div></div>
- <div class="step"><div class="num">2</div><div><h3>Test it <span class="mins">(2 min)</span></h3>
- <p>Next to each one, mark it: <b>F</b> = a Fact I can prove, <b>R</b> = a Fear about what might happen, <b>H</b> = an old Habit of thought. Most doubts turn out to be fears and habits, not facts.</p></div></div>
- <div class="step"><div class="num">3</div><div><h3>Rewrite it <span class="mins">(1 min)</span></h3>
- <p>Turn each one into: <i>"I notice I'm thinking ______. What is one small step I can take anyway?"</i></p></div></div>
- <div class="foot"><span>The Quiet Rules</span><span>1 / 2</span></div>
+<!-- PAGE 1 : cover -->
+<div class="page green center">
+ <div class="frame"></div><div class="frame2"></div>
+ <div style="padding-top:30mm"><div class="lab">A Guided Workbook &nbsp;·&nbsp; Free Sample</div></div>
+ <div style="margin-top:12mm"><img class="photo" src="adrian.jpg"></div>
+ <h1 class="t" style="margin-top:14mm">From Self-Doubt<br>to <i>Self-Trust</i></h1>
+ <div class="rule"></div>
+ <p class="tag">Understand the voice that holds you back, and build the quiet confidence that moves you forward, one honest page at a time.</p>
+ <div class="badge">FREE SAMPLE: LESSON 1</div>
+ <div class="foot" style="justify-content:center"><span>FEATURING ADRIAN COLE &nbsp;·&nbsp; 13 GUIDED LESSONS &nbsp;·&nbsp; 14-DAY TRACKER</span></div>
 </div>
 
-<div class="page">
- <span class="tag">YOUR FIRST REP</span>
- <h1 style="font-size:24pt;margin-top:10mm">One small step <span>today</span></h1>
- <p>Self-trust is built the same way a muscle is: with small reps, not big motivation. Pick <b>one</b> of these and do it in the next 5 minutes:</p>
- <ul>
-  <li>Send the message you keep rewriting, in its rough version.</li>
-  <li>Say one opinion out loud that you would normally swallow.</li>
-  <li>Make one small decision without asking anybody.</li>
- </ul>
- <p style="margin-top:6mm">It does not have to go well. It only has to happen. That is the rep.</p>
+<!-- PAGE 2 : lesson -->
+<div class="page cream">
+ <div class="pad">
+  <div class="lab" style="color:#8a6d00">Lesson 1 &nbsp;·&nbsp; Free sample</div>
+  <h2>The Voice Isn't <i>a Fact</i></h2>
+  <p class="lead">Self-doubt sounds like the truth for one simple reason: it is the voice you have listened to the longest. It says <i>"you're not ready"</i>, <i>"they'll think it's stupid"</i>, <i>"everyone else has it figured out"</i>, and after years of hearing it, it feels like a fact.</p>
+  <p class="lead" style="margin-bottom:2mm">It isn't. It is a habit of thought, and a habit can be tested.</p>
+  <div class="quote">Your goal today is not to silence the voice. It is to stop letting it make your decisions. Doubt can ride along. It just doesn't get the wheel.</div>
 
- <div class="box" style="margin-top:8mm"><b>Day 1 tracker</b></div>
- <div class="row"><label>Today's date</label><div class="line"></div></div>
- <div class="row"><label>The doubt I caught</label><div class="line"></div></div>
- <div class="row"><label>Fact, Fear or Habit?</label><div class="line"></div></div>
- <div class="row"><label>The small rep I did</label><div class="line"></div></div>
- <div class="row"><label>How it felt after (1 to 5)</label><div class="line"></div></div>
+  <div class="step"><div class="n">1</div><div><h3>Catch it <span>2 MIN</span></h3><p>Write down three doubts you told yourself this week, word for word, exactly the way the voice says them.</p></div></div>
+  <div class="step"><div class="n">2</div><div><h3>Test it <span>2 MIN</span></h3><p>Next to each one write <b>F</b> if it is a Fact you can prove, <b>R</b> if it is a Fear about what might happen, or <b>H</b> if it is an old Habit of thought. Most doubts turn out to be fears and habits.</p></div></div>
+  <div class="step"><div class="n">3</div><div><h3>Rewrite it <span>1 MIN</span></h3><p>Turn each one into: <i>"I notice I'm thinking ______. What is one small step I can take anyway?"</i></p></div></div>
+ </div>
+ <div class="foot" style="color:#8a6d00"><span>FROM SELF-DOUBT TO SELF-TRUST</span><span>2</span></div>
+</div>
 
- <div class="cta"><b>Want to keep going?</b><br>
- The full <b>Self-Doubt to Self-Trust</b> program has 13 lessons and a 14-day tracker so you can practice this one small step at a time. The link is in my Instagram bio.</div>
- <div class="foot"><span>The Quiet Rules</span><span>2 / 2</span></div>
+<!-- PAGE 3 : first rep + tracker -->
+<div class="page cream">
+ <div class="pad">
+  <div class="lab" style="color:#8a6d00">Your first rep</div>
+  <h2>One small step <i>today</i></h2>
+  <p class="lead">Self-trust is built the way a muscle is built: with small reps, not big motivation. Pick <b>one</b> and do it in the next five minutes.</p>
+  <ul class="chk" style="color:var(--ink)">
+   <li style="padding-left:9mm"><span style="position:absolute;left:0;color:#b8860b">✓</span>Send the message you keep rewriting, in its rough version.</li>
+   <li><span style="position:absolute;left:0;color:#b8860b">✓</span>Say one opinion out loud that you would normally swallow.</li>
+   <li><span style="position:absolute;left:0;color:#b8860b">✓</span>Make one small decision without asking anybody.</li>
+  </ul>
+  <p class="lead" style="font-size:12.5pt;font-style:italic">It does not have to go well. It only has to happen. That is the rep.</p>
+
+  <div class="card"><b style="font-family:Montserrat,Arial;letter-spacing:.2em;font-size:9pt">DAY 1 TRACKER</b></div>
+  <div class="row"><div class="q">Today's date</div><div class="line"></div></div>
+  <div class="row"><div class="q">The doubt I caught</div><div class="line"></div></div>
+  <div class="row"><div class="q">Fact, Fear or Habit?</div><div class="line"></div></div>
+  <div class="row"><div class="q">The small rep I did</div><div class="line"></div></div>
+  <div class="row"><div class="q">How it felt after (1 to 5)</div><div class="line"></div></div>
+ </div>
+ <div class="foot" style="color:#8a6d00"><span>FROM SELF-DOUBT TO SELF-TRUST</span><span>3</span></div>
+</div>
+
+<!-- PAGE 4 : continue -->
+<div class="page green center">
+ <div class="frame"></div><div class="frame2"></div>
+ <div style="padding-top:36mm"><div class="lab">You just did Lesson 1</div></div>
+ <h1 class="t" style="font-size:40pt;margin-top:14mm;padding:0 18mm">You don't have to be <i>your own worst critic.</i></h1>
+ <div class="rule"></div>
+ <p class="tag" style="margin:0 22mm;font-size:15pt">This guided workbook is your safe space to slow down, get honest with yourself, and rebuild the trust you've been missing, one honest page at a time.</p>
+ <div class="three" style="margin:16mm 20mm">
+  <div><div class="big">13</div><div class="s">GUIDED<br>LESSONS</div></div>
+  <div><div class="big">✎</div><div class="s">PRACTICAL<br>EXERCISES</div></div>
+  <div><div class="big">14</div><div class="s">DAY<br>TRACKER</div></div>
+ </div>
+ <p class="tag" style="font-size:18pt;color:var(--gold);margin-top:6mm">Your mind is not the enemy.<br>It's just been through a lot.</p>
+ <a class="btn" href="https://adraincole.gumroad.com/l/self-doubt-to-self-trust">GET THE FULL WORKBOOK →</a>
+ <div class="url">adraincole.gumroad.com/l/self-doubt-to-self-trust</div>
+ <div class="foot" style="justify-content:center"><span>ADRIAN COLE &nbsp;·&nbsp; SELF-TRUST &nbsp;·&nbsp; GROWTH &nbsp;·&nbsp; A BETTER YOU</span></div>
 </div>
 </body></html>
