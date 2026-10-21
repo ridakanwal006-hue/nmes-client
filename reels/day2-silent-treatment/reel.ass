@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Struck,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Quote,Montserrat ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,5,3,5,40,40,0,1
+Style: Label,Montserrat Black,62,&H00000000,&H00000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,12,0,5,40,40,0,1
+Style: Pop,Montserrat Black,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,7,4,5,40,40,0,1
+Style: Line,Montserrat Black,10,&H002A2AE8,&H002A2AE8,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.00,0:00:21.80,Line,,0,0,0,,{\an7\pos(0,0)\p1\1c&H00D7FF&\fscx0\t(0,21800,\fscx100)}m 0 0 l 1080 0 1080 12 0 12{\p0}
+Dialogue: 0,0:00:00.00,0:00:00.93,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}When someone\N{\fs104}{\c&H00D7FF&}goes silent{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.95,0:00:01.98,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}to {\fs104}{\c&H00D7FF&}punish{\fs80}{\c&HFFFFFF&} you,
+Dialogue: 0,0:00:02.00,0:00:03.14,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}that's not {\fs104}{\c&H00D7FF&}space{\fs80}{\c&HFFFFFF&}.
+Dialogue: 1,0:00:03.16,0:00:03.94,Pop,,0,0,0,,{\pos(540,1460)\frz-4\fscx120\fscy120\t(0,110,\fscx100\fscy100)}THAT'S\N{\c&H00D7FF&}A WEAPON.
+Dialogue: 0,0:00:03.96,0:00:05.02,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}They stop\N{\fs104}{\c&H00D7FF&}answering{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:05.04,0:00:05.73,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}and suddenly
+Dialogue: 0,0:00:05.75,0:00:06.33,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you're the one
+Dialogue: 0,0:00:06.35,0:00:07.06,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}rewriting{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.08,0:00:07.79,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}every {\fs104}{\c&H00D7FF&}message{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.81,0:00:08.58,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you ever {\fs104}{\c&H00D7FF&}sent{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:08.60,0:00:09.49,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}You {\fs104}{\c&H00D7FF&}apologized{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.51,0:00:10.69,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}for something\Nyou {\fs104}{\c&H00D7FF&}never did{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.71,0:00:11.48,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}just to make
+Dialogue: 0,0:00:11.50,0:00:13.14,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}the {\fs104}{\c&H00D7FF&}quiet{\fs80}{\c&HFFFFFF&} stop.
+Dialogue: 0,0:00:13.16,0:00:13.91,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}And the second
+Dialogue: 0,0:00:13.93,0:00:14.74,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}you {\fs104}{\c&H00D7FF&}apologize{\fs80}{\c&HFFFFFF&},
+Dialogue: 0,0:00:14.76,0:00:15.55,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}they act like
+Dialogue: 0,0:00:15.57,0:00:16.90,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}nothing ever happened{\fs80}{\c&HFFFFFF&}\Nat all.
+Dialogue: 0,0:00:16.92,0:00:17.89,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}Real {\fs104}{\c&H00D7FF&}peace{\fs80}{\c&HFFFFFF&}\Ndoesn't
+Dialogue: 0,0:00:17.91,0:00:19.26,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}require you to {\fs104}{\c&H00D7FF&}beg{\fs80}{\c&HFFFFFF&}.
+Dialogue: 0,0:00:19.28,0:00:20.15,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}Silence{\fs80}{\c&HFFFFFF&} used as
+Dialogue: 0,0:00:20.17,0:00:20.95,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}{\fs104}{\c&H00D7FF&}punishment{\fs80}{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.97,0:00:21.78,Main,,0,0,0,,{\pos(540,1460)\fscx85\fscy85\t(0,90,\fscx100\fscy100)}is {\fs104}{\c&H00D7FF&}control{\fs80}{\c&HFFFFFF&}.
