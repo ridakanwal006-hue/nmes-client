@@ -147,9 +147,10 @@ z = '1' + ''.join(f"+{cfg.get('punch_amt', 0.22)}*clip((t-{a})/0.35,0,1)*clip(({
 vf = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
       f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,"
       + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
-      ('' if cfg.get('no_glitch') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
+      ('' if cfg.get('no_glitch') else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
+      if cfg.get('glitch_neg') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
       f"negate=enable='between(t,{glitch+0.1},{glitch+0.16})',"
-      f"eq=brightness=0.45:enable='between(t,{glitch+0.16},{glitch+0.2})',") +
+      f"eq=brightness=0.45:enable='between(t,{glitch+0.16},{glitch+0.2})',")) +
       f"ass={tmp}/cap.ass:fontsdir=/usr/share/fonts")
 run(f'ffmpeg -y -loglevel error {src} -i "{tmp}/mix.wav" -vf "{vf}" -map 0:v -map 1:a -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -t {dur} -movflags +faststart "{out}"')
 print('OK', out, 'glitch', round(glitch, 2), 'hits', [round(h[0], 2) for h in hits], 'words', len(W))
