@@ -72,7 +72,7 @@ punch = cfg.get('punch', [])
 hits = []  # callouts for "one/two/three"
 names = {'one:': 'NUMBER ONE', 'two:': 'NUMBER TWO', 'three...': 'NUMBER THREE', 'three': 'NUMBER THREE'}
 for w, a, b in W:
-    if w.lower() in names and a > hook_end: hits.append((a, names[w.lower()]))
+    if w.lower() in names and a > hook_end and not cfg.get('no_hits'): hits.append((a, names[w.lower()]))
 # ---- voice (raw Brian, only loudness) + synthesized bed and sfx
 run(f'ffmpeg -y -loglevel error -i "{voice}" -af anull -ar 48000 "{tmp}/voice.wav"')
 bed = ("aevalsrc='0.5*sin(2*PI*55*t)+0.35*sin(2*PI*82.5*t+0.4*sin(2*PI*0.1*t))+0.18*sin(2*PI*110.4*t)"
@@ -149,6 +149,8 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
  "Style: Sub,Inter Medium,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,0,3,5,60,60,0,1",
  "Style: Body,Inter SemiBold,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,0,0,1,0,3,5,60,60,0,1",
  "", "[Events]", "Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text"]
+if cfg.get('hook_color') == 'white':   # white hook instead of red
+    ass = [l.replace('&H00271EFF', '&H00FFFFFF').replace('&HFF271EFF', '&HFFFFFFFF').replace('&H00271EFF', '&H00FFFFFF') if l.startswith('Style: Mono') else l for l in ass]
 for i, line in enumerate(cfg['hook_red']):
     y = cfg.get('hook_y', 880) + i * 112
     tdt = cfg.get('type_dt', 0.05); st = 0.1 + sum(len(l) * tdt + 0.18 for l in cfg['hook_red'][:i])   # each line starts when the previous finished typing
@@ -170,8 +172,14 @@ else:
            "drawtext=fontfile=/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf:text='WOLFE':fontsize=260:fontcolor=white@0.05:x=(w-text_w)/2:y=1500,"
            "drawtext=fontfile=/usr/share/fonts/opentype/inter/Inter-Medium.otf:text='PREVIEW - character clip goes here':fontsize=34:fontcolor=white@0.35:x=(w-text_w)/2:y=120\"")
 z = '1' + ''.join(f"+{cfg.get('punch_amt', 0.22)}*clip((t-{a})/0.35,0,1)*clip(({b}-t)/0.35,0,1)" for a, b in punch)
-vf = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
-      f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,"
+zz = z.replace('(t-', '(on/30-').replace('t)/', 'on/30)/') if False else '1' + ''.join(f"+{cfg.get('punch_amt', 0.22)}*clip((on/30-{a})/0.6,0,1)*clip(({b}-on/30)/0.6,0,1)" for a, b in punch)
+if cfg.get('smooth_zoom') and punch:   # sub-pixel smooth zoom (zoompan on a 2x upscale) instead of per-frame integer scaling
+    zoomf = ("fps=30,scale=2160:3840:force_original_aspect_ratio=increase:flags=lanczos,crop=2160:3840,"
+             f"zoompan=z='{zz}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30,")
+else:
+    zoomf = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
+             f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,")
+vf = (zoomf
       + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
       ('' if cfg.get('no_glitch') else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
       if cfg.get('glitch_neg') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
