@@ -117,17 +117,43 @@ def type_events(text, pos_y, st, en, dt, fs=None):
         rest2 = '{\\alpha&HFF&}' + text[i:] if i < n else ''
         ev.append(f"Dialogue: 1,{ts(a)},{ts(b)},Red,,0,0,0,,{{\\pos(540,{pos_y})\\blur1{fst}}}{text[:i]}{rest2}")
     return ev
+def type_events_mono(text, pos_y, st, en, dt, fs=86, cursor_end=None):
+    """Monospace typewriter with a block cursor: the cursor sits in the next (hidden) cell, so layout never shifts; it blinks after typing."""
+    ev = []; text = text.upper(); n = len(text); cur = '\u2588'
+    def lay(typed, cursor, hidden): return typed + ('{\\alpha&H00&}' + cur if cursor else '{\\alpha&HFF&}' + cur) + '{\\alpha&HFF&}' + hidden
+    T = [st]
+    for i in range(n): T.append(T[-1] + dt * (1.7 if (i * 7) % 5 == 0 else 1.0))   # slightly irregular rhythm
+    for i in range(n + 1):
+        a = T[i]; b = T[i + 1] if i < n else a + 0.35
+        typed = text[:i]; hidden = (text[i+1:] if i < n else '')
+        for name, extra in (('MonoGlow', '\\blur22\\alpha&H70&'), ('MonoRed', '\\blur1')):
+            ev.append(f"Dialogue: {0 if name == 'MonoGlow' else 1},{ts(a)},{ts(b)},{name},,0,0,0,,{{\\pos(540,{pos_y}){extra}\\fs{fs}}}{lay(typed, True, hidden)}")
+    # blink while the hook is held
+    t0 = T[n] + 0.35; k = 0
+    ce = en if cursor_end is None else min(cursor_end, en)
+    while t0 < ce:
+        on = (k % 2 == 0); t1 = min(t0 + 0.35, ce)
+        for name, extra in (('MonoGlow', '\\blur22\\alpha&H70&'), ('MonoRed', '\\blur1')):
+            ev.append(f"Dialogue: {0 if name == 'MonoGlow' else 1},{ts(t0)},{ts(t1)},{name},,0,0,0,,{{\\pos(540,{pos_y}){extra}\\fs{fs}}}{lay(text, on, '')}")
+        t0 = t1; k += 1
+    if ce < en:   # hold the finished line without the cursor
+        for name, extra in (('MonoGlow', '\\blur22\\alpha&H70&'), ('MonoRed', '\\blur1')):
+            ev.append(f"Dialogue: {0 if name == 'MonoGlow' else 1},{ts(ce)},{ts(en)},{name},,0,0,0,,{{\\pos(540,{pos_y}){extra}\\fs{fs}}}{lay(text, False, '')}")
+    return ev
 ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", "WrapStyle: 2", "",
  "[V4+ Styles]", "Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding",
  "Style: Red,Inter ExtraBold,100,&H00271EFF,&HFF271EFF,&H00271EFF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,40,40,0,1",
  "Style: Glow,Inter ExtraBold,100,&H00271EFF,&HFF271EFF,&H00271EFF,&H00000000,0,0,0,0,100,100,0,0,1,14,0,5,40,40,0,1",
+ "Style: MonoRed,DejaVu Sans Mono,86,&H00271EFF,&HFF271EFF,&H00271EFF,&H00000000,1,0,0,0,100,100,0,0,1,0,0,5,40,40,0,1",
+ "Style: MonoGlow,DejaVu Sans Mono,86,&H00271EFF,&HFF271EFF,&H00271EFF,&H00000000,1,0,0,0,100,100,0,0,1,14,0,5,40,40,0,1",
  "Style: Sub,Inter Medium,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,1,0,0,100,100,0,0,1,0,3,5,60,60,0,1",
  "Style: Body,Inter SemiBold,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,0,0,1,0,3,5,60,60,0,1",
  "", "[Events]", "Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text"]
 for i, line in enumerate(cfg['hook_red']):
     y = cfg.get('hook_y', 880) + i * 112
     tdt = cfg.get('type_dt', 0.05); st = 0.1 + sum(len(l) * tdt + 0.18 for l in cfg['hook_red'][:i])   # each line starts when the previous finished typing
-    ass += type_events(line, y, st, hook_end, tdt)
+    nxt = 0.1 + sum(len(l) * tdt + 0.18 for l in cfg['hook_red'][:i + 1]) if i + 1 < len(cfg['hook_red']) else hook_end   # earlier lines lose their cursor when the next line starts
+    ass += (type_events_mono(line, y, st, hook_end, tdt, cursor_end=nxt) if cfg.get('type_style') == 'mono' else type_events(line, y, st, hook_end, tdt))
 for i, line in enumerate(cfg['hook_sub']):
     ass.append(f"Dialogue: 1,{ts(2.0)},{ts(hook_end)},Sub,,0,0,0,,{{\\pos(540,{1200 + i*76})\\fad(200,150)}}{line}")
 for t, label in hits:   # red typed callout, ~1.3 s, at about 56% height
