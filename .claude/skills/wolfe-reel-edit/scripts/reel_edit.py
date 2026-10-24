@@ -81,8 +81,12 @@ run(f'ffmpeg -y -loglevel error -f lavfi -i "{bed}" "{tmp}/bed.wav"')
 sfx = []
 def add(lavfi, af, t, name):
     run(f'ffmpeg -y -loglevel error -f lavfi -i "{lavfi}" -af "{af}" -ar 48000 "{tmp}/{name}.wav"'); sfx.append((f'{tmp}/{name}.wav', t))
-add("anoisesrc=d=0.9:c=white:a=0.5", "highpass=f=1500,afade=t=in:d=0.5,afade=t=out:st=0.5:d=0.4,volume=0.6", max(glitch - 0.6, 0), 'whoosh')
-add("aevalsrc='0.9*sin(2*PI*(60+900*exp(-14*t))*t)':d=0.5:s=48000", "afade=t=out:st=0.2:d=0.3", glitch, 'zap')
+GSFX = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'glitch_sfx.wav')
+if cfg.get('glitch_ref_sfx') and os.path.exists(GSFX):   # real glitch sound cut from the reference reel (impact lands ~0.28 s after the glitch starts)
+    sfx.append((GSFX, glitch))
+else:
+  add("anoisesrc=d=0.9:c=white:a=0.5", "highpass=f=1500,afade=t=in:d=0.5,afade=t=out:st=0.5:d=0.4,volume=0.6", max(glitch - 0.6, 0), 'whoosh')
+  add("aevalsrc='0.9*sin(2*PI*(60+900*exp(-14*t))*t)':d=0.5:s=48000", "afade=t=out:st=0.2:d=0.3", glitch, 'zap')
 for j, t in enumerate(cfg.get('whoosh_at', [])):   # extra soft whooshes at section changes
     add("anoisesrc=d=0.8:c=pink:a=0.5", "highpass=f=1200,afade=t=in:d=0.45,afade=t=out:st=0.45:d=0.35,volume=0.45", max(t, 0), f'wh{j}')
 for i, (t, _) in enumerate(hits):
@@ -92,14 +96,14 @@ CLEAN = bool(cfg.get('clean_audio'))   # voice only: no bed, no whoosh/zap (avoi
 if CLEAN and not cfg.get('sfx_only'): sfx = []
 fc = "[0:a]asplit=2[v][vsc];[1:a]volume=-24dB[b0];[b0][vsc]sidechaincompress=threshold=0.02:ratio=8:attack=20:release=400[bd]"
 labs = ['[v]', '[bd]']
-for i, (_, t) in enumerate(sfx):
-    fc += f";[{i+2}:a]adelay={int(t*1000)}|{int(t*1000)},volume=-8dB[s{i}]"; labs.append(f'[s{i}]')
+for i, (pth, t) in enumerate(sfx):
+    fc += f";[{i+2}:a]adelay={int(t*1000)}|{int(t*1000)},volume={'0dB' if pth == GSFX else '-8dB'}[s{i}]"; labs.append(f'[s{i}]')
 SFXO = bool(cfg.get('sfx_only'))   # voice + whoosh/zap/hits only: no drone bed, no ducking
 if SFXO:
     ins = f'-i "{tmp}/voice.wav" ' + ' '.join(f'-i "{p}"' for p, _ in sfx)
     fc = '[0:a]anull[v]'; labs = ['[v]']
-    for i, (_, t) in enumerate(sfx):
-        fc += f";[{i+1}:a]adelay={int(t*1000)}|{int(t*1000)},volume=-8dB[s{i}]"; labs.append(f'[s{i}]')
+    for i, (pth, t) in enumerate(sfx):
+        fc += f";[{i+1}:a]adelay={int(t*1000)}|{int(t*1000)},volume={'0dB' if pth == GSFX else '-8dB'}[s{i}]"; labs.append(f'[s{i}]')
     fc += f";{''.join(labs)}amix=inputs={len(labs)}:normalize=0,loudnorm=I=-14:TP=-1.0:LRA=7[a]"
 elif CLEAN: fc = "[0:a]loudnorm=I=-14:TP=-1.5:LRA=7[a]"; ins = f'-i "{tmp}/voice.wav"'
 elif not SFXO: fc += f";{''.join(labs)}amix=inputs={len(labs)}:normalize=0,loudnorm=I=-14:TP=-1.0:LRA=7[a]"
