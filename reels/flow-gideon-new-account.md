@@ -14,7 +14,9 @@ Vertical 9:16, locked camera, static, chest-up to knees framing exactly like the
 
 VOICE (identical in every clip): a mature American male voice, mid-low baritone (about 105 to 120 Hz), calm, serious, confident, with a slight natural gravel. Normal speaking pace (about 150 words per minute), continuous and natural, only a short half-second pause between sentences. Sounds like a real man speaking to one person. No echo, no reverb, no announcer tone, same voice in every clip.
 Only his voice. No host voice, no second person, no laughter, no "hmm" or filler sounds, no breathing noises, no music, no sound effects.
+He talks with natural, relaxed hand gestures like a real person in conversation: one or both hands move to emphasize key words, palms open, then return to rest on his knees. Gestures are moderate, never exaggerated, and the hands stay inside the frame.
 No on-screen text, captions or subtitles. Do not spell words letter by letter.
+Pronounce every word fully and clearly, especially the word "comment" (say it as "KOM-ent", the whole word, not "co-comment" and not "common").
 ```
 
 ## Clip likhne ka tareeqa
@@ -25,3 +27,11 @@ Keyword ko ek lafz ki tarah bulwayein: `He says: "Comment QUESTIONS, and I'll se
 
 ## Pehle test clip
 Sirf ek chhoti clip banayein, check karein: seedha dekhe, awaaz purani jaisi, koi subtitle ya hansi nahi. Phir baqi banayein.
+
+## CTA clip (paste-ready, last clip)
+[MASTER LOCK] +
+```
+He says, slowly and clearly, with open hand gestures: "Comment QUESTIONS, and I'll send you my free playbook."
+```
+(QUESTIONS ki jagah apna keyword rakhein. "Comment" aur keyword dono poore lafz, letters mein nahi.)
+Agar "comment" phir bhi ajeeb nikle, to line aise likhein: `He says: "Leave a comment, QUESTIONS, and I'll send you my free playbook."` aur edit mein mein sirf "Leave a" kaat dungi.
