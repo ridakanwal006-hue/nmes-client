@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLFE | Reel Script Library</title>
+<meta name="description" content="22 ready-to-post reel scripts for the WOLFE brand: hooks, captions, hashtags, search keywords and comment-keyword CTAs.">
+<style>
+:root{--bg:#09090b;--panel:#141418;--line:#2a2a31;--red:#e5222f;--red2:#ff4d5a;--text:#ececf0;--mute:#9a9aa6;--green:#6ee7a0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(9,9,11,.92);backdrop-filter:blur(8px);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:800;letter-spacing:.4em;color:var(--red);font-size:15px}
+nav a{margin-left:18px;text-decoration:none;color:var(--mute);font-size:14px}
+nav a:hover{color:#fff}
+.hero{padding:64px 0 44px;background:radial-gradient(ellipse at 80% 100%,rgba(229,34,47,.28),transparent 60%)}
+.kicker{color:var(--red2);font-weight:800;letter-spacing:.24em;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.05;margin:.3em 0;font-weight:900;text-transform:uppercase}
+h1 span{color:var(--red2)}
+.sub{max-width:640px;color:#cfcfd8;font-size:18px}
+.ai{display:inline-block;margin-top:14px;font-size:13px;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}
+.stats b{display:block;font-size:30px;font-weight:900;color:#fff;line-height:1}
+.stats span{font-size:12px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,4vw,34px);line-height:1.1;margin:.2em 0 .5em;text-transform:uppercase;font-weight:900}
+.lead{color:#cfcfd8;max-width:680px;margin-bottom:22px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.chip{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:7px 14px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.chip.on{background:var(--red);border-color:var(--red)}
+.chip.free{color:var(--green)}.chip.free.on{color:#fff}
+#q{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:9px 14px;font:inherit;font-size:15px}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.item.open{border-color:var(--red)}
+.row{display:flex;align-items:center;gap:14px;width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;padding:14px 18px;cursor:pointer}
+.row:hover{background:#18181d}
+.num{flex:0 0 auto;min-width:44px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--red2)}
+.rt{flex:1;min-width:0}
+.rt b{display:block;font-size:17px;line-height:1.3}
+.rt span{display:block;font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arrow{color:var(--mute);transition:transform .2s;flex:0 0 auto}
+.item.open .arrow{transform:rotate(90deg);color:var(--red2)}
+.body{display:none;border-top:1px solid var(--line);padding:6px 18px 18px}
+.item.open .body{display:block}
+.hook{margin:14px 0 6px;background:#0d0d10;border:1px solid #4a1a1f;border-left:3px solid var(--red);border-radius:8px;padding:10px 12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--red2);font-weight:700}
+.hook small,.lbl{display:block;color:var(--mute);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;font-family:Inter,system-ui,sans-serif}
+.lbl{margin:16px 0 6px}
+.lines{counter-reset:l}
+.ln{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid #202026;font-size:17px;line-height:1.5;color:#e4e4ea}
+.ln:last-child{border-bottom:0}
+.ln i{flex:0 0 26px;font-style:normal;font-size:12px;font-weight:800;color:var(--red2);padding-top:4px}
+.ln.cta{color:#fff;font-weight:700}
+.info{font-size:14px;color:#cfcfd8;margin:6px 0}
+.info b{color:#fff}
+.note{margin:12px 0 0;font-size:13px;color:#d8c9a8;background:#1c1810;border:1px solid #3a321c;border-radius:8px;padding:8px 11px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.cta-pill{font-weight:800;letter-spacing:.1em;font-size:12px;background:#1f0d10;border:1px solid #4a1a1f;color:var(--red2);padding:4px 10px;border-radius:999px}
+.cta-pill.free{background:#0d1f14;border-color:#1f4a2c;color:var(--green)}
+.to{font-size:13px;color:var(--mute);flex:1;min-width:140px}
+.cp{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:6px 11px;font:inherit;font-size:12.5px;cursor:pointer}
+.cp:hover{border-color:var(--red)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+td:nth-child(3),td:nth-child(4){white-space:nowrap}
+.tw{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.two{grid-template-columns:1fr}nav{display:none}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.box h3{margin-top:0}
+.box li{margin:.3em 0;font-size:15px;color:#d8d8e0}
+.yes li::marker{color:var(--green)}.no li::marker{color:var(--red2)}
+footer{border-top:1px solid var(--line);padding:32px 0 60px;color:var(--mute);font-size:13.5px}
+footer p{max-width:760px}
+.empty{color:var(--mute);padding:30px 0;display:none}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">WOLFE</div>
+<nav><a href="#scripts">Scripts</a><a href="#keywords">Keywords</a><a href="#funnel">Funnel</a><a href="#rules">Rules</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Reel script library</div>
+  <h1>22 scripts built on <span>real search words</span></h1>
+  <p class="sub">Each script has a hook, a spoken line in the locked Brian voice, a caption, hashtags and a comment keyword that sends people to the matching guide. Free guide first, paid guide second.</p>
+  <div class="ai">Dorian Wolfe is an AI-generated character, not a real person</div>
+  <div class="stats"><div><b id="n1">0</b><span>scripts</span></div><div><b id="n2">0</b><span>search phrases</span></div><div><b>10</b><span>CTA keywords</span></div></div>
+</div></div>
+
+<section id="scripts"><div class="wrap">
+  <h2>Scripts</h2>
+  <p class="lead">One script per row. Tap a row to open it: the spoken text is shown line by line, the way you read it into the voice. Filter by comment keyword or pack, or search a word.</p>
+  <div class="tools" id="chips"></div>
+  <div class="tools"><input id="q" type="search" placeholder="Search a word: ghosted, bald, scam, divorce..."></div>
+  <div class="list" id="grid"></div>
+  <div class="empty" id="empty">No script matches. Clear the search.</div>
+</div></section>
+
+<section id="keywords"><div class="wrap">
+  <h2>Keyword bank</h2>
+  <p class="lead">Estimated monthly <b>YouTube</b> searches (vidIQ, 12 Oct 2026). Instagram and TikTok volume is not available, so use these as a guide to the words people type, not exact reach. Lower competition is easier to be found.</p>
+  <div class="tw"><table id="bank"><thead><tr><th>Topic</th><th>Phrase people type</th><th>Searches / month</th><th>Competition</th></tr></thead><tbody></tbody></table></div>
+  <p class="lead" style="margin-top:16px">Put the main phrase in five places: the first spoken sentence, the on-screen hook, the first line of the caption, 3-5 hashtags, and the file name or alt text.</p>
+</div></section>
+
+<section id="funnel"><div class="wrap">
+  <h2>Comment keyword → reply</h2>
+  <div class="tw"><table id="fun"><thead><tr><th>Keyword</th><th>First reply</th><th>Then offer</th></tr></thead><tbody></tbody></table></div>
+  <p class="lead" style="margin-top:16px">Every DM carries: "Dorian Wolfe is an AI-generated character. General information. 7-day refund."</p>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules for every post</h2>
+  <div class="two">
+    <div class="box yes"><h3>Do</h3><ul>
+      <li>Say "AI character" in the bio and in a pinned comment.</li>
+      <li>Label message examples "for example".</li>
+      <li>Say "try" and "practise", not "this will work".</li>
+      <li>Add the 988 line on sad or hopeless topics (US).</li>
+      <li>Put the free keyword (SCAM or TEXTS) on at least half of the posts.</li>
+      <li>Use meme formats, with your own clips and sound.</li>
+    </ul></div>
+    <div class="box no"><h3>Don't</h3><ul>
+      <li>Tell personal stories ("my ex", "I dated 100 women").</li>
+      <li>Promise a date, a partner or a reply.</li>
+      <li>Invent numbers or reviews. Only the FTC ($2.4B, people 60+, all fraud) and Pew (64% of men, all ages) numbers are checked.</li>
+      <li>Use another person's clip or trending audio outside the app.</li>
+      <li>Make medical, legal or financial claims.</li>
+      <li>Joke at a person or a group. Joke with them, or at the common mistake.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>General information for adults. Not therapy, medical, legal or financial advice. No result is guaranteed. Dorian Wolfe is an AI-generated character and has no personal life story. In the US, call or text 988 if you feel hopeless.</p>
+</div></footer>
+
+<script>
+const DATA = {"scripts": [{"code": "S1", "title": "Dating after divorce for men", "kw": "STARTER", "hook": "DATING AFTER DIVORCE FOR MEN: START HERE", "product": "Dating Again After 40: Starter Guide", "script": ["Okay, listen. If you're a man dating after divorce... and you don't know where to start... this is for you.", "First. You're not behind. There's no clock. How soon should you start dating after divorce? When you can think about her without thinking about your ex. That's it.", "Second. Rebuild your circle. Call one friend this week. Make one plan. Don't make dating your whole life.", "Third. Write your thirty-second story. Who you are, what you like, what you're looking for. Say it out loud until it sounds like you.", "That's the start. A calm plan, one small step at a time.", "If you want the whole step-by-step, comment STARTER. I'll send it."], "caption": "Dating after divorce for men: a calm way to start again. How to start dating again after divorce, without rushing. Comment STARTER for the guide. AI character, general information, not therapy.", "tags": "#datingafterdivorce #datingafter40 #howtostartdatingagain #menover40 #divorcerecovery #datingadviceformen", "keywords": "", "note": "not a promise of any outcome. Add the 988 line in the pinned comment.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S2", "title": "The fear of dating again", "kw": "CHALLENGE", "hook": "THE FEAR OF DATING AGAIN AFTER DIVORCE", "product": "30-Day Confidence Challenge", "script": ["Okay... can I say something? The fear of dating again... is normal. Almost everybody feels it. It doesn't mean you're broken.", "You don't fix fear by reading. You fix it by doing one small thing. A small thing. Not a big thing.", "Day one, say hello to a stranger. Day four, ask one question and listen to the answer. Day ten, message one person. That's it.", "Small steps, every day... and the fear gets smaller. Not gone. Smaller.", "And if it feels heavier than nerves... talk to someone. In the US, call or text nine-eight-eight.", "I made a thirty-day workbook for this. Comment CHALLENGE."], "caption": "How to get back into dating after divorce when you're scared. One small step a day. Comment CHALLENGE for the 30-day workbook. Not a treatment for anxiety or depression. US: call or text 988.", "tags": "#fearofdating #datingagain #datinganxiety #menover40 #confidence #datingafter40", "keywords": "", "note": "this is the one that needs the crisis line on screen too.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S3", "title": "Dating profile tips for men over 50", "kw": "PROFILE", "hook": "DATING PROFILE TIPS FOR MEN OVER 50", "product": "Profile Fixer for 40+", "script": ["Why don't dating apps work for men over fifty? Often... it's the profile. Not you. Three quick fixes.", "One. Your first photo. Clear face. Natural light. A real smile. No sunglasses, no group shot, no car.", "Two. Your bio. Don't list rules. Don't write \"no drama.\" Say what you like to do, and what a good Saturday looks like.", "Three. Ask one easy question at the end, so she has something to answer.", "These are dating profile tips for men over fifty that cost nothing. Try them for a week.", "There's a whole guide, with ten bio templates. Comment PROFILE."], "caption": "Dating profile tips for men over 50 and over 40: photos, bio, and a question she can answer. Comment PROFILE for the Profile Fixer.", "tags": "#datingprofiletips #datingprofileformen #onlinedatingafter40 #menover50 #datingapps #profilephotos", "keywords": "", "note": "do not claim \"more matches\". Say \"try for a week and see\".", "pack": "a", "fmt": "", "pain": ""}, {"code": "S4", "title": "Bald guy dating", "kw": "PROFILE", "hook": "DATING APP AS A BALD GUY? DO THIS.", "product": "Profile Fixer for 40+ (bald-friendly section)", "script": ["Dating as a bald guy. Okay, listen. Don't hide it. The hat photo makes it look like you're hiding something.", "Show your head, in good light, with a real smile. Confidence reads in the first second.", "Shave it clean, or keep it neat. A tidy beard helps. Wear something that fits you.", "I'm not going to tell you it's all fine for everyone, because nobody has good data on that. What I can tell you is this... own it, and the photo does the work.", "I put a whole \"own it\" section in my Profile Fixer. Comment PROFILE."], "caption": "Dating app as a bald guy: photo, grooming, and bio tips. Bald guy dating done calmly. Comment PROFILE.", "tags": "#baldguy #baldmen #datingbald #baldanddating #menover40 #datingprofiletips", "keywords": "", "note": "stays honest, there is no real data on how baldness affects match rates, and the guide says so. Don't claim \"women like bald men\" as a fact.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S5", "title": "Romance scam red flags", "kw": "SCAM", "hook": "ELDER ROMANCE SCAM: 5 SIGNS", "product": "free Scam Red-Flag Checklist → Scam-Proof Dating Guide for 50+", "script": ["Romance scam explained in thirty seconds. Five signs.", "One. They won't video call. Always an excuse.", "Two. They love you fast. Days, not months.", "Three. They have a crisis. A hospital, a visa, a \"stuck\" shipment.", "Four. They ask for money, gift cards, or crypto. Never send it.", "Five. They want to move to another app, quickly.", "The FTC says people sixty and over lost two point four billion dollars to fraud in twenty twenty-four. That's all fraud, not only romance, but it shows how big this is.", "I made a free checklist. Comment SCAM and I'll send it."], "caption": "Elder romance scam: 5 warning signs and what to do. Comment SCAM for the free checklist. Report scams at reportfraud.ftc.gov. AI character, general info, not legal or financial advice.", "tags": "#romancescam #elderromancescam #romancescamexplained #scamawareness #datingsafety #over50dating", "keywords": "", "note": "verified fact is \"all fraud\". Don't narrow it to romance.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S6", "title": "Deepfake / can't video call", "kw": "SCAM", "hook": "DEEPFAKE & ROMANCE SCAM: HOW TO CHECK", "product": "free checklist → Scam-Proof Guide", "script": ["They look real on video. They're not. Deepfakes make this harder.", "Ask for a live video call, and ask them to do something simple. Hold up three fingers. Turn the camera. Say your name.", "A real person can do it. A scam usually can't, or finds a reason not to.", "Never send money to someone you haven't met. If you already did... stop, tell your bank, and report it.", "I put the steps in a free checklist. Comment SCAM."], "caption": "Deepfake romance scam: a simple live-video check. Comment SCAM for the free checklist.", "tags": "#deepfake #romancescam #onlinedatingsafety #scamalert #over50dating #datingsafety", "keywords": "", "note": "simple, honest. No claim that this catches every deepfake. Say \"usually\".", "pack": "a", "fmt": "", "pain": ""}, {"code": "S7", "title": "What to never text", "kw": "TEXTS", "hook": "WHAT TO NEVER TEXT A WOMAN", "product": "free 50 Texts That Get Replies → paid Playbook", "script": ["What to never text a woman. Okay, listen. Four things.", "One. \"Hey.\" Just \"hey.\" She has nothing to answer.", "Two. A wall of text. Three paragraphs, and she hasn't replied yet.", "Three. \"Why aren't you replying?\" That kills it.", "Four. Anything you wouldn't say to her face.", "Instead... ask one easy question about something she said. That's it.", "I put fifty texts in a free sheet. Comment TEXTS."], "caption": "What to never text a girl, and what to send instead. Comment TEXTS for 50 free texts.", "tags": "#whattotext #textingadvice #datingtexts #menover40 #conversationskills #datingadviceformen", "keywords": "", "note": "if this replaces Reel 1's \"free guide\" line, no more mismatch: TEXTS is free.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S8", "title": "What to text after you get her number", "kw": "TEXTS", "hook": "WHAT TO TEXT AFTER YOU GET HER NUMBER", "product": "", "script": ["You got her number. Now what? Don't send \"hey.\"", "Send one line about where you met. \"I'm still thinking about that coffee place you mentioned. What's the one thing I should order?\"", "That's it. Short, specific, easy to answer.", "Wait. Don't send three in a row. If she replies, ask one follow-up. If she doesn't... leave it a day.", "I put fifty examples in a free sheet. Comment TEXTS."], "caption": "What to text a girl after you get her number: one line, one question. Comment TEXTS.", "tags": "#whattotextagirl #texting #datingtips #conversationstarters #menover40", "keywords": "", "note": "example line labelled \"for example\" in the on-screen text.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S9", "title": "She stopped replying", "kw": "QUIET", "hook": "SHE STOPPED REPLYING? DON'T SEND THIS.", "product": "She Went Quiet", "script": ["She stopped replying. You've checked your phone ten times. Okay... breathe.", "Don't send \"?\" Don't send \"so you're ignoring me?\" Don't double text.", "Give it forty-eight hours. Then send one message, short and kind. \"Hey, no pressure. If you want to talk, I'm here.\"", "Then let it go. If she wants to, she will. If she doesn't... that's information, not an insult.", "That's what to do when a girl isn't replying to your texts. Calm, once, and move on.", "I wrote a short guide on this. Comment QUIET."], "caption": "She stopped replying to my texts. What to do, and what not to do. Comment QUIET for the guide.", "tags": "#shestoppedreplying #ghosted #whattodowhensheghosts #datingadvice #menover40 #textingadvice", "keywords": "", "note": "no promise she'll reply. The last line is the point: dignity.", "pack": "a", "fmt": "", "pain": ""}, {"code": "S10", "title": "Rejection", "kw": "REJECT", "hook": "GHOSTED AT 45? HERE'S WHAT HELPS.", "product": "Rejection & Resilience", "script": ["Ghosted. It stings more at forty-five than it did at twenty-five.", "First twenty-four hours. Don't text her. Don't text anyone angry. Walk, eat, sleep.", "Then ask one question: what can I learn, and what isn't about me?", "One no is one person's answer, not a verdict on you.", "If it keeps happening, look at the pattern, not the person. And if it's heavy... call someone. US, nine-eight-eight.", "There's a short guide. Comment REJECT."], "caption": "Ghosted? How to keep your confidence after a no. Comment REJECT. If it feels heavier than nerves, talk to someone (US: 988).", "tags": "#ghosted #rejection #resilience #datingafter40 #menmentalhealth #datingadvice", "keywords": "", "note": "", "pack": "a", "fmt": "", "pain": ""}, {"code": "S11", "title": "First date tips for men", "kw": "DATE", "hook": "FIRST DATE TIPS FOR MEN OVER 40", "product": "First Date Blueprint", "script": ["First date tips for men over forty. Three things.", "One. Pick a short date. Coffee, a walk. Sixty to ninety minutes. Easy to leave, easy to extend.", "Two. Arrive early. Phone away. The first five minutes set the mood.", "Three. Ask, then listen. Echo what she says, then ask one more. Dig, don't interview.", "Tell a friend where you're going. Meet in public.", "It's calm, not clever. There's a whole plan in the guide. Comment DATE."], "caption": "First date tips for men over 40: short date, phone away, ask and listen. Comment DATE for the First Date Blueprint.", "tags": "#firstdate #firstdatetips #datingadviceformen #datingafter40 #conversationskills", "keywords": "", "note": "", "pack": "a", "fmt": "", "pain": ""}, {"code": "S12", "title": "Nothing to say", "kw": "ASK", "hook": "HOW TO TEXT A GIRL WHEN YOU DON'T KNOW WHAT TO SAY", "product": "80 Conversation Starters (and playbook)", "script": ["You blank on dates. Everybody does. Here's a trick.", "Easy question. \"What's the best part of your week?\" Warm one. \"What's something you're looking forward to?\" Deeper one, later. \"What did you want to be when you were ten?\"", "Then follow up. \"Tell me more.\" \"What made you pick that?\" That's all.", "It isn't a list. It's curiosity. Ask, then listen.", "I made eighty cards. Comment ASK."], "caption": "Conversation starters for dates, easy to hard. Comment ASK for 80 printable cards.", "tags": "#conversationstarters #datingquestions #firstdate #menover40 #datingconversation", "keywords": "", "note": "", "pack": "a", "fmt": "", "pain": ""}, {"code": "M1", "title": "sending \"hey\"", "kw": "TEXTS", "hook": "NOBODY: ... ME AT 45: \"HEY.\"", "product": "", "script": ["Nobody. Absolutely nobody. Me at forty-five: \"hey.\" And then I stare at the phone for three days.", "Okay, listen. \"Hey\" gives her nothing to answer. That's why it dies.", "Ask one easy thing about what she said. \"You mentioned the lake. Do you go often?\" One question. That's it.", "Fifty more like it are in a free sheet. Comment TEXTS."], "caption": "", "tags": "#whattotext #textingadvice #menover40 #datingafter40", "keywords": "what to text a girl, what to never text a girl", "note": "", "pack": "b", "fmt": "Nobody: / Me:", "pain": "nothing to say"}, {"code": "M2", "title": "the quiet house", "kw": "STARTER", "hook": "POV: IT'S SATURDAY NIGHT AND THE HOUSE IS TOO QUIET", "product": "", "script": ["POV. It's Saturday night. The house is quiet. Too quiet.", "I'm not going to tell you to \"get out there.\" You know that already.", "Start smaller. Call one friend. Make one plan for next week. That's all.", "Dating after divorce isn't a race. It's a few small steps, in order.", "I wrote the steps down. Comment STARTER. And if the quiet feels heavy, really heavy... talk to someone. In the US, call or text nine-eight-eight."], "caption": "", "tags": "#datingafterdivorce #lonely #menover40 #startingover", "keywords": "dating after divorce for men, how to start dating again after divorce", "note": "keep the 988 line on screen.", "pack": "b", "fmt": "POV", "pain": "loneliness after divorce"}, {"code": "M3", "title": "checking the phone", "kw": "QUIET", "hook": "ME: \"I'M CALM.\" ALSO ME: *CHECKS PHONE 11 TIMES", "product": "", "script": ["Me: I'm calm. Also me: checked the phone eleven times.", "She hasn't replied. And your brain is writing a whole movie.", "Here's the rule. Wait forty-eight hours. Send one short, kind message. Then let it go.", "No question marks. No \"so you're ignoring me.\" No double texts.", "If she wants to talk, she will. If not... that's information, not an insult. Comment QUIET for the guide."], "caption": "", "tags": "#ghosted #shestoppedreplying #datingadvice #menover40", "keywords": "she stopped replying to my texts, what to do when a girl is not replying", "note": "", "pack": "b", "fmt": "Me vs. also me", "pain": "waiting, anxiety"}, {"code": "M4", "title": "bald", "kw": "PROFILE", "hook": "TELL ME YOU'RE BALD ON A DATING APP WITHOUT TELLING ME", "product": "", "script": ["Tell me you're bald on a dating app... without telling me. Hat in every photo. Sunglasses. Photo from 2014.", "Okay, listen. Hiding it says more than the head does.", "Clear photo. Good light. Real smile. Let her see you.", "I can't promise how anyone reacts, nobody has good data on that. But a photo that looks like you... is the one you won't have to explain later.", "The \"own it\" section is in my Profile Fixer. Comment PROFILE."], "caption": "", "tags": "#baldguy #baldmen #datingprofile #menover40", "keywords": "dating app as a bald guy, bald guy dating", "note": "laugh with, never at.", "pack": "b", "fmt": "Tell me you're X without telling me", "pain": "hiding the head"}, {"code": "M5", "title": "scam signs", "kw": "SCAM", "hook": "RED FLAG: \"I CAN'T VIDEO CALL.\" GREEN FLAG: \"SURE, CALL ME.\"", "product": "", "script": ["Red flag: \"I can't video call.\" Always an excuse.", "Red flag: \"I love you\" in week one.", "Red flag: a crisis... and they need money. Gift cards. Crypto.", "Green flag: they're happy to meet in public, and they don't rush you.", "If someone asks you for money before you've met, stop. Every time.", "I made a free checklist of ten signs. Comment SCAM."], "caption": "", "tags": "#romancescam #redflags #greenflags #over50dating #datingsafety", "keywords": "romance scam explained, elder romance scam", "note": "", "pack": "b", "fmt": "Red flag / Green flag", "pain": "fear of being cheated"}, {"code": "M6", "title": "openers", "kw": "TEXTS", "hook": "RATING FIRST MESSAGES: \"HEY\" = 2 OUT OF 10", "product": "", "script": ["Rating first messages. \"Hey.\" Two out of ten.", "\"Hey beautiful.\" Three. She's seen it a hundred times.", "\"Your photo with the dog... what's his name?\" Eight. Specific, easy to answer.", "That's it. Be specific. Ask one question.", "Fifty examples in a free sheet. Comment TEXTS."], "caption": "", "tags": "#firstmessage #datingtips #textingadvice #menover40", "keywords": "what to text a girl after you get her number", "note": "show each message on screen with the score. Labelled as examples.", "pack": "b", "fmt": "Rating X out of 10", "pain": "bad first messages"}, {"code": "M7", "title": "pain of rejection", "kw": "REJECT", "hook": "THINGS THAT HIT DIFFERENT AFTER 40: BEING GHOSTED", "product": "", "script": ["Things that hit different after forty. Being ghosted.", "It stings more now. You've got more on the line, and less time to waste.", "First twenty-four hours: don't text her. Walk. Eat. Sleep.", "One no is one person's answer. It's not a verdict on you.", "If it keeps happening, look at the pattern, not at yourself. And if it feels heavier than nerves, talk to someone. US: nine-eight-eight.", "Short guide. Comment REJECT."], "caption": "", "tags": "#ghosted #rejection #datingafter40 #menmentalhealth", "keywords": "ghosted, dating after 40", "note": "", "pack": "b", "fmt": "Things that hit different after 40", "pain": ""}, {"code": "M8", "title": "the blank", "kw": "ASK", "hook": "WHAT TO SAY ON A DATE WHEN YOUR MIND GOES BLANK", "product": "", "script": ["Your mind goes blank. She's waiting. Okay... wait for it.", "Say this: \"What's the best part of your week so far?\"", "Then listen. Then ask: \"What made that good?\"", "That's it. Two questions. People love talking about the good parts.", "I made eighty of these as printable cards. Comment ASK."], "caption": "", "tags": "#conversationstarters #firstdate #datingquestions #menover40", "keywords": "conversation starters for dates, how to text a girl when you don't know what to say", "note": "", "pack": "b", "fmt": "Wait for it", "pain": "nothing to talk about on a date"}, {"code": "M9", "title": "three dating-app mistakes", "kw": "PROFILE", "hook": "3 MEN YOU'LL FIND ON EVERY DATING APP", "product": "", "script": ["Three men on every dating app.", "The hat guy. Can't see his face.", "The \"no drama\" guy. His whole bio is complaints.", "The empty guy. \"I like to laugh.\" That's it.", "Don't be any of them. Clear photo. Say what a good Saturday looks like. End with a question.", "Ten bio templates are in my Profile Fixer. Comment PROFILE."], "caption": "", "tags": "#datingprofile #onlinedating #menover50 #datingapps", "keywords": "dating profile tips for men over 50, dating profile photos for men", "note": "", "pack": "b", "fmt": "Types of men", "pain": "no matches"}, {"code": "M10", "title": "texts that kill vs texts that work", "kw": "PLAYBOOK", "hook": "BEFORE / AFTER: THE SAME TEXT, FIXED", "product": "", "script": ["Before: \"Why aren't you replying?\" Dead.", "After: \"No pressure, hope your week's going well.\" Alive.", "Before: three paragraphs. After: one line and a question.", "Same man. Same woman. Different message.", "I put the whole system in the Conversation Playbook. Comment PLAYBOOK."], "caption": "", "tags": "#textingadvice #conversationskills #datingadvice", "keywords": "what to never text a girl", "note": "this one sells the paid Playbook, so the DM must say \"link\", not \"free\".", "pack": "b", "fmt": "Before / After", "pain": "replies stop"}], "bank": [["Divorce", "dating after divorce for women (watch: men's version is the gap)", "12,174 (rising)", "36"], ["Divorce", "dating after divorce for men", "10,538", "28"], ["Divorce", "how to start dating again after divorce", "11,017 (rising), 4,911", "26"], ["Divorce", "how soon should you start dating after divorce", "5,155", "19"], ["Divorce", "the fear of dating again after divorce", "5,259", "25"], ["Divorce", "how to get back into dating after divorce", "4,815", "20"], ["Age", "after 40 dating", "7,835", "30"], ["Age", "online dating after 40", "4,395", "23"], ["Age", "dating advice after 40", "4,326", "17"], ["Age", "why dating apps don't work for men over 50", "4,211", "37"], ["Age", "why men over 50 are saying no to dating", "4,840", "20"], ["Profile", "dating profile photos for men", "5,299", "22"], ["Profile", "dating profile tips for men", "4,488", "44"], ["Profile", "dating profile tips for men over 50", "3,593", "13"], ["Bald", "dating app as a bald guy", "5,361", "26"], ["Bald", "dating bald / bald guy dating", "4,558 / 4,366", "29 / 11"], ["Bald", "dating a bald", "4,264", "10"], ["Scam", "elder romance scam", "5,384", "43"], ["Scam", "romance scam explained", "5,294", "30"], ["Scam", "deepfake & romance scam", "5,426", "42"], ["Scam", "email to email romance scam", "6,486", "36"], ["Texting", "what to never text a girl", "9,496", "39"], ["Texting", "what to do when a girl is not replying your text", "5,328", "21"], ["Texting", "what to text a girl after you get her number", "5,097", "29"], ["Texting", "how to text a girl when you don't know what to say", "4,991", "35"], ["Texting", "what to do if a girl ghosts your text", "4,333", "33"], ["Ghosting", "why she stopped replying", "4,543", "46"], ["Ghosting", "she stopped replying to my texts", "4,021", "38"], ["Dates", "first date tips for men", "3,300-4,500", "35-38"]], "free": ["SCAM", "TEXTS"]};
+const PRODUCT = {
+  SCAM:['Free Scam Red-Flag Checklist','Scam-Proof Dating Guide $12'],
+  TEXTS:['Free 50 Texts That Get Replies','Conversation Playbook $17'],
+  STARTER:['Dating Again After 40: Starter Guide $14','Toolkit bundle $39'],
+  PROFILE:['Profile Fixer for 40+ $12','Starter Guide $14'],
+  CHALLENGE:['30-Day Confidence Challenge $12','Rejection & Resilience $8'],
+  QUIET:['She Went Quiet $9','Rejection & Resilience $8'],
+  REJECT:['Rejection & Resilience $8','30-Day Confidence Challenge $12'],
+  DATE:['First Date Blueprint $12','80 Conversation Starters $9'],
+  ASK:['80 Conversation Starters $9','Conversation Playbook $17'],
+  PLAYBOOK:['The Conversation Playbook $17','Complete Library $59']
+};
+const FREE = new Set(DATA.free);
+const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cap = s => s ? s.charAt(0).toUpperCase()+s.slice(1) : s;
+let filter = 'ALL', query = '';
+
+document.getElementById('n1').textContent = DATA.scripts.length;
+document.getElementById('n2').textContent = DATA.bank.length;
+
+const chips = [['ALL','All'],['A','Search pack'],['B','Meme pack'],...Object.keys(PRODUCT).map(k=>[k,k])];
+document.getElementById('chips').innerHTML = chips.map(([k,l]) => '<button class="chip'+(FREE.has(k)?' free':'')+(k==='ALL'?' on':'')+'" data-k="'+k+'">'+l+(FREE.has(k)?' (free)':'')+'</button>').join('');
+document.getElementById('chips').onclick = e => {
+  const b = e.target.closest('.chip'); if(!b) return;
+  filter = b.dataset.k;
+  document.querySelectorAll('#chips .chip').forEach(x => x.classList.toggle('on', x===b));
+  render();
+};
+document.getElementById('q').oninput = e => { query = e.target.value.toLowerCase(); render(); };
+
+function card(d, i, open){
+  const free = FREE.has(d.kw);
+  const prod = PRODUCT[d.kw] ? PRODUCT[d.kw][0] : '';
+  const sub = d.pack==='b' ? esc(d.fmt)+(d.pain? ' · pain: '+esc(d.pain):'') : esc(d.product||'');
+  const last = d.script.length-1;
+  return '<div class="item'+(open?' open':'')+'" data-i="'+i+'">'
+   +'<button class="row" data-toggle="'+i+'"><span class="num">'+esc(d.code)+'</span><span class="rt"><b>'+esc(cap(d.title))+'</b><span>'+esc(d.hook)+'</span></span><span class="cta-pill'+(free?' free':'')+'">'+esc(d.kw)+'</span><span class="arrow">&#9656;</span></button>'
+   +'<div class="body">'
+   +'<div class="hook"><small>1 · On-screen hook</small>'+esc(d.hook)+'</div>'
+   +'<div class="lbl">2 · Say it, line by line</div><div class="lines">'
+   +d.script.map((l,k)=>'<div class="ln'+(k===last?' cta':'')+'"><i>'+(k+1)+'</i><span>'+esc(l)+'</span></div>').join('')+'</div>'
+   +(d.keywords?'<div class="lbl">3 · Search words</div><div class="info">'+esc(d.keywords)+'</div>':'')
+   +(d.caption?'<div class="lbl">'+(d.keywords?'4':'3')+' · Caption</div><div class="info">'+esc(d.caption)+'</div>':'')
+   +'<div class="lbl">Hashtags</div><div class="info">'+esc(d.tags)+'</div>'
+   +(sub?'<div class="lbl">Type</div><div class="info">'+sub+'</div>':'')
+   +(d.note?'<div class="note">'+esc(cap(d.note))+'</div>':'')
+   +'<div class="acts"><span class="cta-pill'+(free?' free':'')+'">Comment '+esc(d.kw)+'</span><span class="to">&rarr; '+esc(prod)+'</span>'
+   +'<button class="cp" data-i="'+i+'" data-w="script">Copy script</button>'
+   +(d.caption?'<button class="cp" data-i="'+i+'" data-w="caption">Copy caption</button>':'')
+   +'<button class="cp" data-i="'+i+'" data-w="tags">Copy tags</button></div>'
+   +'</div></div>';
+}
+function render(){
+  const list = DATA.scripts.map((d,i)=>[d,i]).filter(([d])=>{
+    if(filter==='A'&&d.pack!=='a') return false;
+    if(filter==='B'&&d.pack!=='b') return false;
+    if(PRODUCT[filter]&&d.kw!==filter) return false;
+    if(query){ const h=(d.title+d.hook+d.script.join(' ')+d.caption+d.tags+d.keywords+d.pain+d.fmt).toLowerCase(); if(!h.includes(query)) return false; }
+    return true;
+  });
+  document.getElementById('grid').innerHTML = list.map(([d,i],n)=>card(d,i,n===0&&list.length===1)).join('');
+  document.getElementById('empty').style.display = list.length?'none':'block';
+}
+document.getElementById('grid').onclick = e => {
+  const tg = e.target.closest('[data-toggle]');
+  if(tg){ const it = tg.closest('.item'); const was = it.classList.contains('open');
+    document.querySelectorAll('.item.open').forEach(x=>x.classList.remove('open'));
+    if(!was){ it.classList.add('open'); it.scrollIntoView({block:'nearest',behavior:'smooth'}); } return; }
+  const b = e.target.closest('.cp'); if(!b) return;
+  const d = DATA.scripts[+b.dataset.i], w = b.dataset.w;
+  const t = w==='script' ? d.script.join('\n\n') : w==='caption' ? d.caption : d.tags;
+  const done = () => { const o=b.textContent; b.textContent='Copied'; setTimeout(()=>b.textContent=o,1200); };
+  if(navigator.clipboard) navigator.clipboard.writeText(t).then(done, done); else done();
+};
+document.querySelector('#bank tbody').innerHTML = DATA.bank.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('');
+document.querySelector('#fun tbody').innerHTML = Object.entries(PRODUCT).map(([k,v])=>'<tr><td><span class="cta-pill'+(FREE.has(k)?' free':'')+'">'+k+'</span></td><td>'+esc(v[0])+'</td><td>'+esc(v[1])+'</td></tr>').join('');
+render();
+</script>
+</body></html>

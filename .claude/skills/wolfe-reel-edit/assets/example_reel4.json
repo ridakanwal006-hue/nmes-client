@@ -1,0 +1,5 @@
+{"script": "Okay, listen. Stop saying, \"you're so pretty.\" She's heard it a hundred times. It doesn't stand out... it just blends in. Send her these three messages instead. Number one: \"Okay, I have a theory about you. Tell me if I'm wrong.\" Number two: \"You seem like someone who's way more fun than your profile lets on.\" And number three... \"I'm making a bet with myself. What's the one thing you'd never admit on a first date?\" Why does this work? Because it's playful, it's specific to her, and it's easy to answer. It creates a little curiosity, instead of just handing out a compliment. And if she doesn't reply, that's fine. Don't chase. Just move on. If you want fifty more texts like these, comment TEXTS, and I'll send you my free cheat sheet.",
+ "hook_red": ["Send her these", "three messages"],
+ "hook_sub": ["Stop saying \"you're so pretty.\"", "Do this instead."],
+ "hook_end": 4.9,
+ "punch": [[11, 15], [19, 23], [26, 29], [32, 36], [40, 48]]}

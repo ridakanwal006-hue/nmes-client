@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLFE | Dorian Wolfe</title>
+<style>
+:root{--bg:#09090b;--panel:#141418;--line:#2a2a31;--red:#e5222f;--red2:#ff4d5a;--text:#ececf0;--mute:#9a9aa6}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% 120%,rgba(229,34,47,.3),transparent 60%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;display:flex;justify-content:center}
+.wrap{width:100%;max-width:460px;padding:36px 18px 48px;text-align:center}
+.logo{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;border:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-weight:900;letter-spacing:.1em;color:var(--red2);font-size:22px;box-shadow:0 0 28px rgba(229,34,47,.45);background:#0f0f13}
+h1{margin:.1em 0;font-size:24px;letter-spacing:.06em;text-transform:uppercase}
+.tag{color:#cfcfd8;font-size:15px;margin:.2em 0 .5em}
+.ai{display:inline-block;font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:3px 11px;margin-bottom:22px}
+.link{display:flex;align-items:center;gap:14px;text-align:left;text-decoration:none;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:12px}
+.link img{width:54px;height:81px;object-fit:cover;border-radius:6px;background:#000;flex:0 0 auto}
+.link b{display:block;font-size:16px;line-height:1.25}
+.link span{display:block;font-size:13px;color:var(--mute);margin-top:2px}
+.link.hi{border-color:var(--red)}
+.link.off{opacity:.5;pointer-events:none}
+.pill{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.15em;color:var(--red2);text-transform:uppercase;margin-bottom:2px}
+.sec{font-size:12px;color:var(--mute);letter-spacing:.2em;text-transform:uppercase;margin:22px 0 10px}
+.note{font-size:12px;color:var(--mute);margin-top:26px}
+</style>
+</head>
+<body><div class="wrap">
+  <div class="logo">WOLFE</div>
+  <h1>Dorian Wolfe</h1>
+  <div class="tag">Calm, practical guides for dating again after 35. USA · Canada · UK.</div>
+  <div class="ai">AI-generated character, not a real person</div>
+  <div id="links"></div>
+  <div class="note">General information. Not therapy, medical, legal or financial advice. No result is guaranteed. In the USA or Canada, call or text 988. In the UK, Samaritans 116 123.</div>
+</div>
+<script>
+/* ===== EDIT: your links (leave '' to grey the button out) ===== */
+const LINKS = [
+  {section:'Start free'},
+  {id:'wolfe-scam-red-flag-checklist-us-ca-uk', pill:'Free', name:'Scam Red-Flag Checklist', sub:'10 warning signs, and where to report (USA, Canada, UK)', url:'', hi:true},
+  {id:'wolfe-50-texts-cheat-sheet', pill:'Free', name:'50 Texts That Get Replies', sub:'Copy-and-adapt messages', url:''},
+  {section:'For everyone'},
+  {id:'wolfe-conversation-starters-35-plus-us-ca-uk', pill:'$12', name:'Conversation Starters After 35', sub:'What he can ask her, what she can ask him', url:'', hi:true},
+  {section:'For him'},
+  {id:'wolfe-dating-again-starter-guide-us-ca-uk', pill:'$14', name:'Dating Again After 40: Starter Guide', sub:'A calm step-by-step plan', url:''},
+  {id:'wolfe-profile-fixer-40-plus-us-ca-uk', pill:'$12', name:'Profile Fixer for 40+', sub:'Photos, bio, swipe file', url:''},
+  {id:'wolfe-30-day-confidence-workbook-us-ca-uk', pill:'$12', name:'30-Day Confidence Challenge', sub:'One small action a day', url:''},
+  {section:'For her'},
+  {id:'wolfe-dating-again-starter-guide-for-her-us-ca-uk', pill:'$14', name:'Starter Guide for Women (35+)', sub:'Safety-first plan for starting again', url:'', hi:true},
+  {id:'wolfe-profile-fixer-for-women-35-plus-us-ca-uk', pill:'$12', name:'Profile Fixer for Women 35+', sub:'Photos, bio and privacy', url:''},
+  {id:'wolfe-30-day-confidence-challenge-for-women-us-ca-uk', pill:'$12', name:'30-Day Challenge for Women', sub:'A tracker, a ladder and a "no" log', url:''},
+  {section:'More'},
+  {id:'wolfe-dating-again-starter-guide-us-ca-uk', pill:'Bundle $39', name:'Dating After 40 Toolkit', sub:'6 guides, one price', url:''},
+  {id:'wolfe-dating-again-starter-guide-for-her-us-ca-uk', pill:'Bundle $29', name:'For-Her Toolkit', sub:'3 guides, one price', url:''}
+];
+/* ===== end editable block ===== */
+document.getElementById('links').innerHTML = LINKS.map(l => l.section
+  ? '<div class="sec">'+l.section+'</div>'
+  : '<a class="link'+(l.hi?' hi':'')+(l.url?'':' off')+'" href="'+(l.url||'#')+'"><img src="img/'+l.id+'.png" alt=""><div><span class="pill">'+l.pill+'</span><b>'+l.name+'</b><span>'+l.sub+(l.url?'':' (coming soon)')+'</span></div></a>').join('');
+</script>
+</body></html>
