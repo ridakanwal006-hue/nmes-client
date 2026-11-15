@@ -82,7 +82,11 @@ sfx = []
 def add(lavfi, af, t, name):
     run(f'ffmpeg -y -loglevel error -f lavfi -i "{lavfi}" -af "{af}" -ar 48000 "{tmp}/{name}.wav"'); sfx.append((f'{tmp}/{name}.wav', t))
 GSFX = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'glitch_sfx.wav')
-if cfg.get('glitch_ref_sfx') and os.path.exists(GSFX):   # real glitch sound cut from the reference reel (impact lands ~0.28 s after the glitch starts)
+if cfg.get('glitch_style') == 'rip':   # synthesized paper-rip sound for the paper-rip glitch
+    import importlib.util as _iu
+    _sp_ = _iu.spec_from_file_location('rip_glitch', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rip_glitch.py')); rip_glitch = _iu.module_from_spec(_sp_); _sp_.loader.exec_module(rip_glitch)
+    rip_glitch.make_sfx(f'{tmp}/rip_sfx.wav'); sfx.append((f'{tmp}/rip_sfx.wav', glitch))
+elif cfg.get('glitch_ref_sfx') and os.path.exists(GSFX):   # real glitch sound cut from the reference reel (impact lands ~0.28 s after the glitch starts)
     sfx.append((GSFX, glitch))
 else:
   add("anoisesrc=d=0.9:c=white:a=0.5", "highpass=f=1500,afade=t=in:d=0.5,afade=t=out:st=0.5:d=0.4,volume=0.6", max(glitch - 0.6, 0), 'whoosh')
@@ -185,7 +189,7 @@ else:
              f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,")
 vf = (zoomf
       + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
-      ('' if (cfg.get('no_glitch') or cfg.get('glitch_style') == 'tear') else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
+      ('' if (cfg.get('no_glitch') or cfg.get('glitch_style') in ('tear', 'rip')) else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
       if cfg.get('glitch_neg') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
       f"negate=enable='between(t,{glitch+0.1},{glitch+0.16})',"
       f"eq=brightness=0.45:enable='between(t,{glitch+0.16},{glitch+0.2})',")) +
@@ -203,4 +207,7 @@ if cfg.get('glitch_style') == 'tear' and not cfg.get('no_glitch'):   # new glitc
     import subprocess as _sp
     _sp.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', out, '-filter_complex', fc, '-map', '[v]', '-map', '0:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'copy', '-movflags', '+faststart', f'{tmp}/tear.mp4'], check=True)
     os.replace(f'{tmp}/tear.mp4', out)
+if cfg.get('glitch_style') == 'rip' and not cfg.get('no_glitch'):   # paper-rip transition at the glitch moment
+    os.replace(out, f'{tmp}/base.mp4')
+    rip_glitch.run_on_video(f'{tmp}/base.mp4', out, glitch)
 print('OK', out, 'glitch', round(glitch, 2), 'hits', [round(h[0], 2) for h in hits], 'words', len(W))
