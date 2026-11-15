@@ -185,10 +185,22 @@ else:
              f"scale=w='iw*({z})':h='ih*({z})':eval=frame,crop=1080:1920,")
 vf = (zoomf
       + ('' if cfg.get('no_grade') else "curves=all='0/0 0.12/0.06 0.5/0.52 0.88/0.95 1/1',eq=saturation=0.93:contrast=1.06,vignette=angle=PI/4.5,") +
-      ('' if cfg.get('no_glitch') else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
+      ('' if (cfg.get('no_glitch') or cfg.get('glitch_style') == 'tear') else (f"negate=enable='between(t,{glitch},{glitch+0.45})',rgbashift=rh=-16:bh=16:gv=4:enable='between(t,{glitch},{glitch+0.45})',eq=brightness=0.85:enable='between(t,{glitch+0.27},{glitch+0.35})',"
       if cfg.get('glitch_neg') else f"rgbashift=rh=-14:bh=14:gh=4:enable='between(t,{glitch},{glitch+0.3})',"
       f"negate=enable='between(t,{glitch+0.1},{glitch+0.16})',"
       f"eq=brightness=0.45:enable='between(t,{glitch+0.16},{glitch+0.2})',")) +
       f"ass={tmp}/cap.ass:fontsdir=/usr/share/fonts")
 run(f'ffmpeg -y -loglevel error {src} -i "{tmp}/mix.wav" -vf "{vf}" -map 0:v -map 1:a -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -t {dur} -movflags +faststart "{out}"')
+if cfg.get('glitch_style') == 'tear' and not cfg.get('no_glitch'):   # new glitch: horizontal slice tears + RGB split + noise, same moment as the old one
+    G = glitch; L = 0.45
+    amp = f"(110*exp(-pow((T-{G}-0.2)/0.11,2))+8)"
+    def ch(plane, shift):
+        return (f"st(0,sin(floor(Y/28)*12.9898+floor((T-{G})*30)*78.233)*43758.5453);st(0,ld(0)-floor(ld(0)));"
+                f"st(1,if(gt(ld(0),0.6),(ld(0)-0.8)*5*{amp},0));{plane}(X+ld(1)+({shift})*{amp}*0.12,Y)")
+    fc = (f"[0:v]split[a][b];[b]trim=start={G}:end={G+L},setpts=PTS-STARTPTS+{G}/TB,format=gbrp,"
+          f"geq=r='{ch('r', 1)}':g='{ch('g', 0)}':b='{ch('b', -1)}',noise=alls=28:allf=t,format=yuv420p[g];"
+          f"[a][g]overlay=enable='between(t,{G},{G+L})':eof_action=pass[v]")
+    import subprocess as _sp
+    _sp.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', out, '-filter_complex', fc, '-map', '[v]', '-map', '0:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'copy', '-movflags', '+faststart', f'{tmp}/tear.mp4'], check=True)
+    os.replace(f'{tmp}/tear.mp4', out)
 print('OK', out, 'glitch', round(glitch, 2), 'hits', [round(h[0], 2) for h in hits], 'words', len(W))
