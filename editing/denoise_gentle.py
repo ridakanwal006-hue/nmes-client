@@ -7,7 +7,15 @@ word hungry" turned into "now what the word week").  This version:
   2. gates the pauses: inside speech (plus a small pad) the audio is untouched, outside it fades to near silence.
 Run from a folder that has x/*.mp4 ; writes raw{n}.wav (original) and dn{n}.wav (cleaned).
 """
-import subprocess, glob, numpy as np, wave
+import subprocess, glob, os, difflib, numpy as np, wave
+from pocketsphinx import Decoder, get_model_path
+_MP = get_model_path()
+def _asr(path):
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', path, '-ac', '1', '-ar', '16000', '-f', 'wav', '_t16.wav'])
+    d = Decoder(hmm=os.path.join(_MP, 'en-us/en-us'), lm=os.path.join(_MP, 'en-us/en-us.lm.bin'), dict=os.path.join(_MP, 'en-us/cmudict-en-us.dict'), loglevel='FATAL')
+    d.start_utt(); d.process_raw(open('_t16.wav', 'rb').read()[44:], False, True); d.end_utt()
+    return (d.hyp().hypstr if d.hyp() else '').split()
+
 
 def rd(p):
     w = wave.open(p); return w.getframerate(), np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
@@ -33,8 +41,20 @@ for n, f in enumerate(sorted(glob.glob('x/*.mp4'))):
     sr, x = rd(f'raw{n}.wav'); X = stft(x); M = np.abs(X); e = M.mean(0)
     quiet = np.argsort(e)[:max(3, int(len(e) * QFRAC))]
     Nz = np.percentile(M[:, quiet], PCT, axis=1, keepdims=True)
-    g = sm(np.maximum(1 - ALPHA * Nz / (M + 1e-9), FLOOR)); g[:int(HP / (sr / N_))] = 0
-    y = istft(X * g, len(x))
+    # strongest background removal that still keeps the words: a spectral gate (only time-frequency bins clearly above
+    # the clip's own background pass).  Each strength is checked with the speech recogniser against the untouched clip;
+    # if the recognised words change, the next weaker strength is used.
+    ref = _asr(f'raw{n}.wav'); chosen = 'light'
+    r = M / (Nz + 1e-9)
+    y = None
+    for T0, T1, fl in ((6, 16, 0.02), (4, 12, 0.03), (3, 8, 0.05), (2, 5, 0.1)):
+        gg = np.clip((r - T0) / (T1 - T0), 0, 1); gg = fl + (1 - fl) * sm(gg); gg[:int(HP / (sr / N_))] = 0
+        cand = istft(X * gg, len(x)); wr('_cand.wav', sr, cand)
+        if difflib.SequenceMatcher(None, ref, _asr('_cand.wav')).ratio() >= 0.97:
+            y = cand; chosen = f'gate {T0}/{T1}/{fl}'; break
+    if y is None:                          # fall back to the light subtraction
+        g = sm(np.maximum(1 - ALPHA * Nz / (M + 1e-9), FLOOR)); g[:int(HP / (sr / N_))] = 0
+        y = istft(X * g, len(x))
     # speech mask: threshold is relative to THIS clip's own background level (not to the loudest word), so a loud
     # background no longer counts as speech; frames next to speech that are only a little above the floor are kept
     # (soft consonants, word tails).
@@ -52,4 +72,4 @@ for n, f in enumerate(sorted(glob.glob('x/*.mp4'))):
     k = int(RAMP * sr); mask = np.convolve(mask, np.hanning(2 * k) / np.hanning(2 * k).sum(), mode='same')
     gain = GAP_GAIN + (1 - GAP_GAIN) * np.clip(mask, 0, 1)
     wr(f'dn{n}.wav', sr, y * gain)
-    print(n, 'speech %', round(sp.mean() * 100), 'floor dB', round(float(n0), 1))
+    print(n, 'speech %', round(sp.mean() * 100), 'floor dB', round(float(n0), 1), '|', chosen)
