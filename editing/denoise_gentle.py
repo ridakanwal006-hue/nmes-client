@@ -33,6 +33,30 @@ def istft(X, L):
 def sm(g):
     p = np.pad(g, 1, mode='edge'); return sum(p[a:a + g.shape[0], b:b + g.shape[1]] for a in range(3) for b in range(3)) / 9
 
+def _segs(path):
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', path, '-ac', '1', '-ar', '16000', '-f', 'wav', '_t16.wav'])
+    d = Decoder(hmm=os.path.join(_MP, 'en-us/en-us'), lm=os.path.join(_MP, 'en-us/en-us.lm.bin'), dict=os.path.join(_MP, 'en-us/cmudict-en-us.dict'), loglevel='FATAL')
+    d.start_utt(); d.process_raw(open('_t16.wav', 'rb').read()[44:], False, True); d.end_utt()
+    return [(s.word, s.start_frame / 100, s.end_frame / 100) for s in d.seg() if s.word not in ('<s>', '</s>')]
+
+def pause_tones(x, sr, segs):
+    """sustained pitched sounds (howl / animal-like tone / hum) that sit inside a pause: [(start, end)] in seconds.
+    A pause is a recogniser silence >= 0.15 s; tonal = low spectral flatness; loud enough (> -38 dB) to be heard."""
+    n = int(0.04 * sr); win = np.hanning(n); f = np.fft.rfftfreq(4096, 1 / sr); m = (f > 80) & (f < 3000); hits = []
+    for wd, a, b in segs:
+        if wd not in ('<sil>', '[SPEECH]', '++breath++') or b - a < 0.15: continue
+        for t in np.arange(a, b, 0.02):
+            i = int(t * sr); seg = x[i:i + n] * win
+            if len(seg) < n: continue
+            S = np.abs(np.fft.rfft(seg, 4096)) + 1e-9
+            db = 20 * np.log10(np.sqrt(np.mean(seg ** 2)) + 1e-9); flat = float(np.exp(np.mean(np.log(S[m]))) / np.mean(S[m]))
+            if db > -38 and flat < 0.25: hits.append(t)
+    runs = []
+    for t in hits:
+        if runs and t - runs[-1][1] <= 0.04: runs[-1][1] = t
+        else: runs.append([t, t])
+    return [(a - 0.05, b + 0.01) for a, b in runs if b - a >= 0.1]
+
 ALPHA, FLOOR, QFRAC, PCT, HP = 1.2, 0.15, 0.06, 60, 100
 PAD_BEFORE, PAD_AFTER, RAMP, GAP_GAIN = 0.03, 0.10, 0.03, 0.02
 
@@ -76,5 +100,10 @@ for n, f in enumerate(sorted(glob.glob('x/*.mp4'))):
         if v: mask[max(0, int((i * w) - PAD_BEFORE * sr)):int((i + 1) * w + PAD_AFTER * sr)] = 1
     k = int(RAMP * sr); mask = np.convolve(mask, np.hanning(2 * k) / np.hanning(2 * k).sum(), mode='same')
     gain = GAP_GAIN + (1 - GAP_GAIN) * np.clip(mask, 0, 1)
-    wr(f'dn{n}.wav', sr, y * gain)
+    out = y * gain
+    for a, b in pause_tones(x, sr, _segs(f'raw{n}.wav')):      # silence tonal sounds that sit inside pauses
+        ia, ib = max(0, int(a * sr)), min(len(out), int(b * sr)); fd = int(0.008 * sr)
+        out[ia:ib] = 0; out[max(0, ia - fd):ia] *= np.linspace(1, 0, ia - max(0, ia - fd)); out[ib:ib + fd] *= np.linspace(0, 1, len(out[ib:ib + fd]))
+        print('   removed tone in pause', round(a, 2), '-', round(b, 2), 's')
+    wr(f'dn{n}.wav', sr, out)
     print(n, 'speech %', round(sp.mean() * 100), 'floor dB', round(float(n0), 1), '|', chosen)
