@@ -1,0 +1,5 @@
+{"script": "Okay, listen. Stop asking her, \"How was your day?\" It sounds polite, but... it gives her nothing to work with. Ask this instead. Number one: what made you laugh this week? Number two: what are you looking forward to? And number three... what's the best part of your job that nobody sees? See what that does? You skip the facts, and go straight to how she feels. And when she answers, don't rush to the next question. Just repeat one word she said, and ask why. That's how a chat turns into a conversation. If you want the full system, comment PLAYBOOK, and I'll send you my free guide.",
+ "hook_red": ["Stop asking her", "\"How was your day?\""],
+ "hook_sub": ["Ask this instead.", "It changes how she answers."],
+ "hook_end": 4.9,
+ "punch": [[9.5, 13.5], [17, 20], [23.5, 25.5], [28, 32], [34, 40.5]]}
