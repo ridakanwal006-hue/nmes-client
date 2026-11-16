@@ -34,7 +34,7 @@ def sm(g):
     p = np.pad(g, 1, mode='edge'); return sum(p[a:a + g.shape[0], b:b + g.shape[1]] for a in range(3) for b in range(3)) / 9
 
 ALPHA, FLOOR, QFRAC, PCT, HP = 1.2, 0.15, 0.06, 60, 100
-PAD_BEFORE, PAD_AFTER, RAMP, GAP_GAIN = 0.06, 0.10, 0.04, 0.02
+PAD_BEFORE, PAD_AFTER, RAMP, GAP_GAIN = 0.03, 0.10, 0.03, 0.02
 
 for n, f in enumerate(sorted(glob.glob('x/*.mp4'))):
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', f, '-vn', '-ac', '1', '-ar', '48000', f'raw{n}.wav'])
@@ -63,9 +63,14 @@ for n, f in enumerate(sorted(glob.glob('x/*.mp4'))):
     core = en > n0 + 14
     grow = en > n0 + 6
     sp = core.copy()
-    for _ in range(12):                      # grow core into connected "a bit above floor" frames (max 12 frames each side)
-        nb = np.r_[sp[1:], False] | np.r_[False, sp[:-1]]
+    for _ in range(12):                      # soft word tails AFTER speech may grow up to 12 frames (240 ms)
+        nb = np.r_[False, sp[:-1]]
         sp = sp | (nb & grow)
+    pre = core.copy()
+    for _ in range(2):                       # but only 2 frames (40 ms) BEFORE speech, so a sound just ahead of a word
+        nb = np.r_[sp[1:], False] | np.r_[pre[1:], False]   # (howl / tone / breath) is not kept as if it were speech
+        pre = pre | (nb & grow)
+    sp = sp | pre
     mask = np.zeros(len(y))
     for i, v in enumerate(sp):
         if v: mask[max(0, int((i * w) - PAD_BEFORE * sr)):int((i + 1) * w + PAD_AFTER * sr)] = 1
